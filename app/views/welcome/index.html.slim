@@ -1,4 +1,6 @@
+= image_tag("whodini_main/whodini_logo.png")
+
 = form_tag({controller: "welcome", action: "redirect_to_whodini_app"}, method: "post") do 
   = label_tag(:user, "Your Work Email")
-  = email_field(:user, :address)
+  = email_field(:user, :address, placeholder: "Email")
   = submit_tag("Sign Up for Whodini", :class => 'btn')
