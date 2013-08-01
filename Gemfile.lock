@@ -1,5 +1,6 @@
-PATH
-  remote: /Users/timtowles/Projects/whodini-web-common
+GIT
+  remote: git@github.com:whodini/whodini-web-common.git
+  revision: e11d39710166661fcb5a6a99bdc4b6876d347a3d
   specs:
     whodini_main (0.0.1)
       rails (~> 3.2.13)
