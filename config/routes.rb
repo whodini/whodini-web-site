@@ -52,7 +52,7 @@ WhodiniWebSite::Application.routes.draw do
   # just remember to delete public/index.html.
   root :to => 'welcome#index'
   # redirect_to_whodini_app
-  # post "/register"=> "register#register"
+  post "/redirect_to_whodini_app"=> "welcome#redirect_to_whodini_app"
 
   # See how all your routes lay out with "rake routes"
 
