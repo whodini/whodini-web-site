@@ -7,12 +7,22 @@ gem 'rails', '3.2.14'
 
 gem 'sqlite3'
 
-gem 'whodini_main', git: "git@github.com:whodini/whodini_main.git"
+#gem 'whodini_main', git: "git@github.com:whodini/whodini_main.git"
+# for local development:
+gem 'whodini_main', path: "/Users/timtowles/Projects/whodini-web-common"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'compass-rails'
+  gem 'compass-recipes'
+  gem 'modular-scale'
+  gem 'susy' #robust grid system: http://susy.oddbird.net/#susy-oddbird-net
+  gem 'compass-h5bp'
+  # gem 'haml-rails'
+  gem 'slim-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
