@@ -7,9 +7,9 @@ gem 'rails', '3.2.14'
 
 gem 'sqlite3'
 
-gem 'whodini_main', git: "git@github.com:whodini/whodini_main.git"
+# gem 'whodini_main', git: "git@github.com:whodini/whodini_main.git"
 # for local development:
-# gem 'whodini_main', path: "/Users/timtowles/Projects/whodini-web-common"
+gem 'whodini_main', path: "/Users/timtowles/Projects/whodini-web-common"
 
 # Gems used only for assets and not required
 # in production environments by default.
