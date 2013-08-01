@@ -1,9 +1,0 @@
-<div>
-  <h1>Welcome#index</h1>
-  <p>Find me in app/views/welcome/index.html.erb</p>
-  <%= form_tag({controller: "welcome", action: "redirect_to_whodini_app"}, method: "post") do %>
-    <%= label_tag(:user, "Your Work Email") %>
-    <%= email_field(:user, :address) %>
-    <%= submit_tag("Sign Up for Whodini", :class => 'btn') %>
-  <% end %>
-</div>
