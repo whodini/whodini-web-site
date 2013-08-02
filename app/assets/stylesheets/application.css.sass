@@ -33,8 +33,13 @@
 // Locally scoped (global to this app) Styles
 @import globals/layout
 
+@import compass/layout
+@include sticky-footer($base-line-height*2)
 // Section Specific Styles
 // @import sections/foo_section.css.sass
+
+// Shared Styles
+@import shared/footer.css.sass
 
 // Components
 // @import components/foo_component.css.sass

@@ -13,5 +13,12 @@ html.no-js
 
   body class=controller.controller_name
     = render 'chromeframe'
-    = yield
+    div id="root"
+      = yield
+      div id="root_footer"
+    = render 'footer'
     = javascript_include_tag 'application'
+
+
+
+
