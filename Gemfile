@@ -7,7 +7,9 @@ gem 'rails', '3.2.14'
 
 gem 'sqlite3'
 
-gem 'whodini_main', git: "git@github.com:whodini/whodini-web-common.git"
+gem 'whodini_main', git: "https://b869b554d0672dd43377a32d9ec89ada0ce1da6b:x-oauth-basic@github.com/whodini/whodini-web-common.git"
+# for local development:
+
 # for local development:
 # gem 'whodini_main', path: "/Users/timtowles/Projects/whodini-web-common"
 
@@ -25,12 +27,23 @@ group :assets do
   gem 'slim-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
 
 gem 'jquery-rails'
+# Deploy with Capistrano
+gem 'capistrano'
+gem 'cap_git_tools'
+gem 'capawsext', '>=0.2'
+gem 'fog'
+gem 'colored'
+
+	# To use debugger
+	# gem 'debugger'
+	gem 'rvm-capistrano' # Gems for production only
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
