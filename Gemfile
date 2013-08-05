@@ -39,6 +39,7 @@ gem 'cap_git_tools'
 gem 'capawsext', '>=0.2'
 gem 'fog'
 gem 'colored'
+gem 'thin'
 
 	# To use debugger
 	# gem 'debugger'
