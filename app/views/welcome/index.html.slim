@@ -4,3 +4,8 @@
   = label_tag(:user, "Your Work Email")
   = email_field(:user, :address, placeholder: "Email")
   = submit_tag("Sign Up for Whodini", :class => 'btn')
+
+p 
+  | Already have a profile?  
+  = link_to "Log In", :class => 'popup'
+  |.
