@@ -1,0 +1,12 @@
+paths:
+  jquery: 'jquery'
+  underscore: 'underscore'
+  jquery-spin: 'plugins/jquery/jquery.spin'
+  spin: 'plugins/jquery/spin'
+shim:
+  'jquery':
+    exports: '$'
+  'underscore':
+    exports: '_'
+  'jquery-spin':
+    deps: ['jquery', 'spin']

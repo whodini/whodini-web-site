@@ -1,6 +1,12 @@
 GIT
-  remote: https://b869b554d0672dd43377a32d9ec89ada0ce1da6b:x-oauth-basic@github.com/whodini/whodini-web-common.git
-  revision: 66c04749ca4515773d5a7b062dc1734a145bafb0
+  remote: https://github.com/jwhitley/requirejs-rails.git
+  revision: f2330104aeca4d193fd5680a22ae7eee85d814b5
+  specs:
+    requirejs-rails (0.9.1)
+      railties (>= 3.1.1, < 4.1)
+
+PATH
+  remote: /Users/timtowles/Projects/whodini-web-common
   specs:
     whodini_main (0.0.1)
       rails (~> 3.2.13)
@@ -108,7 +114,7 @@ GEM
       compass (>= 0.12.1)
       sass (>= 3.2.0)
       sassy-math (>= 1.5)
-    multi_json (1.7.7)
+    multi_json (1.7.8)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -206,6 +212,7 @@ DEPENDENCIES
   jquery-rails
   modular-scale
   rails (= 3.2.14)
+  requirejs-rails (= 0.9.1)!
   rvm-capistrano
   sass-rails (~> 3.2.3)
   slim-rails

@@ -7,11 +7,15 @@ gem 'rails', '3.2.14'
 
 gem 'sqlite3'
 
-gem 'whodini_main', git: "https://b869b554d0672dd43377a32d9ec89ada0ce1da6b:x-oauth-basic@github.com/whodini/whodini-web-common.git"
+# gem 'whodini_main', git: "https://b869b554d0672dd43377a32d9ec89ada0ce1da6b:x-oauth-basic@github.com/whodini/whodini-web-common.git"
 # for local development:
 
 # for local development:
-# gem 'whodini_main', path: "/Users/timtowles/Projects/whodini-web-common"
+gem 'whodini_main', path: "/Users/timtowles/Projects/whodini-web-common"
+
+# Needs to be outside of assets group because it’s needed in production
+# Use a patched version with an updated r.js file
+gem 'requirejs-rails', '0.9.1', :git => 'https://github.com/jwhitley/requirejs-rails.git'
 
 # Gems used only for assets and not required
 # in production environments by default.
