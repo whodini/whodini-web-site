@@ -18,6 +18,17 @@ html.no-js
       div id="root_footer"
     = render 'footer'
 
+    javascript:
+      var loginComplete = function(callbackUrl) {
+        // TODO: use a simple pub sub plugin to do this instead of Chaplin
+
+        if(callbackUrl)
+          //Chaplin.mediator.publish('childclosed', {'callbackUrl':callbackUrl})
+          whodini.childClosed({ 'callbackUrl' : callbackUrl });
+        else
+          //Chaplin.mediator.publish('childclosed')
+          whodini.childClosed();
+      }
 
 
 
