@@ -34,4 +34,6 @@ WhodiniWebSite::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.app_url = "http://ec2-54-215-119-173.us-west-1.compute.amazonaws.com"
 end
