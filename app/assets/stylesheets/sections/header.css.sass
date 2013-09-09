@@ -1,0 +1,27 @@
+.docked
+  background: #eee
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  // @include container($total-columns, $break)
+
+header#header
+  text-align: center
+  // background: red
+  // position: fixed
+  // top: 0
+  line-height: $base-line-height*2
+  // @include span-columns(12 omega, $break)
+  margin: 0 auto
+  @include container($total-columns, $break)
+
+  .whodini-logo, .contact
+    margin: 10px 0
+
+  .whodini-logo
+    float: left
+
+  .contact
+    float: right
+

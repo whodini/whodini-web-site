@@ -1,0 +1,13 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+ul.points
+  margin: 0
+  padding: 0 0 0 18px
+  +clearfix
+
+  > li
+    @include span-columns(4, $break)
+    &:last-child
+      @include span-columns(4 omega, $break)

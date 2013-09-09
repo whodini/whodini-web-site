@@ -1,0 +1,9 @@
+#signUp
+  = form_tag({controller: "welcome", action: "redirect_to_whodini_app"}, method: "post") do
+    = label_tag(:user, "Your Work Email")
+    = email_field(:user, :address, placeholder: "Email")
+    = submit_tag("Sign Up for Whodini", :class => 'btn')
+  p
+    | Already have a profile? &nbsp;
+    = link_to "Log In", '#', :id => 'popup'
+    |.

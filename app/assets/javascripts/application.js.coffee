@@ -17,6 +17,12 @@ require [
                 .on "click", (event) =>
                     @popupCenter(event)
 
+            $('.sections a').click(->
+              console.log 'click'
+              sectionId = $(this).attr('href')
+              $('body').animate({scrollTop: $(sectionId).offset().top}, 'fast')
+            )
+
         popupCenter: (e) ->
             console.log 'popup center'
             e.preventDefault()

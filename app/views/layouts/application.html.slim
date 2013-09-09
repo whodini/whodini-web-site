@@ -12,8 +12,10 @@ html.no-js
   = render 'head'
 
   body class=controller.controller_name
+
     = render 'chromeframe'
     div id="root"
+      =render 'header'
       = yield
       div id="root_footer"
     = render 'footer'
