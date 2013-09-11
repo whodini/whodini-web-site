@@ -20,6 +20,9 @@
 @include h5bp-chromeframe
 @include h5bp-helpers
 
+// https://github.com/ericam/compass-animation
+@import animation
+
 // http://compass-style.org/help/tutorials/spriting/
 @import "sprites/*.png"
 //-----------------------------------------
@@ -35,13 +38,13 @@
 
 @import compass/layout
 @include sticky-footer($base-line-height*2)
-// Section Specific Styles
-@import sections/header.css.sass
+
+// Components
+@import components/header.css.sass
+@import components/footer.css.sass
+@import components/typography.css.sass
+
+// Sections
 @import sections/welcome.css.sass
 @import sections/sign_up.css.sass
 
-// Shared Styles
-@import shared/footer.css.sass
-
-// Components
-// @import components/foo_component.css.sass

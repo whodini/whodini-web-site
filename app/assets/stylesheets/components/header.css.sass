@@ -1,18 +1,16 @@
 .docked
-  background: #eee
+  background: lighten($brand-grey, 87%)
   position: fixed
   top: 0
   left: 0
   width: 100%
-  // @include container($total-columns, $break)
+  border-bottom: 1px solid lighten($brand-grey, 75%)
+  z-index: 9999
 
-header#header
+
+header#head
   text-align: center
-  // background: red
-  // position: fixed
-  // top: 0
   line-height: $base-line-height*2
-  // @include span-columns(12 omega, $break)
   margin: 0 auto
   @include container($total-columns, $break)
 
@@ -24,4 +22,4 @@ header#header
 
   .contact
     float: right
-
+    +btn-pseudo-states($brand-green-lt, $brand-green-lt)

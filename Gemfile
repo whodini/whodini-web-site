@@ -30,6 +30,8 @@ group :assets do
   # gem 'haml-rails'
   gem 'slim-rails'
 
+  gem 'animation'
+
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby
 

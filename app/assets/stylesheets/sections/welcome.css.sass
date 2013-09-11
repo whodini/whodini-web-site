@@ -1,13 +1,151 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.welcome
+  background: image-url('graph1-09.svg') no-repeat center 330px scroll
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
 
-ul.points
-  margin: 0
-  padding: 0 0 0 18px
-  +clearfix
+  article
+    +clearfix
+
+  // Text blurb to left of slide show
+  .content
+    margin-top: $base-line-height*2
+    @include span-columns(5, $break)
+
+//-----------------------------------------
+// Slide show Demo
+//-----------------------------------------
+figure#whodiniDemo
+  @include span-columns(7 omega, $break)
+  position: relative
+  min-height: 315px
+
+  img
+    position: absolute
+    top: 0
+    right: 0
+    margin-left: -237px
+    +opacity(0)
+
+    &:nth-child(1)
+      +animation(slide-in-2 3s forwards)
+
+    &:nth-child(2)
+      +animation(slide-in-2 3s 2s forwards)
+
+    &:nth-child(3)
+      +animation(slide-in .5s 4s forwards)
+
+    &:nth-child(4)
+      +animation(slide-in .5s 6s forwards)
+
+
+//-----------------------------------------
+// 3 Company Points below slideshow
+//-----------------------------------------
+ul#points
+  margin: $base-line-height*3 0 $base-line-height 0
+  padding: 0
+  +transition(margin .2s ease-out)
+  +pie-clearfix
 
   > li
-    @include span-columns(4, $break)
+    padding-left: 20px
+    padding-right: 20px
+    position: relative
+    color: inherit
+    +span-columns(4, $break)
+    +transition(margin .2s ease-out)
+    >ul
+      padding-left: 20px
+      li
+        color: inherit
+        +trailer(.5)
+
+  > li
     &:last-child
       @include span-columns(4 omega, $break)
+
+    &:nth-child(1)
+      .circle
+        background-image: image-url('point-1.png')
+        +transition(all .2s ease-in-out .2s)
+
+    &:nth-child(2)
+      .circle
+        background-image: image-url('point-2.png')
+        +transition(all .2s ease-in-out .3s)
+
+    &:nth-child(3)
+      .circle
+        background-image: image-url('point-3.png')
+        +transition(all .2s ease-in-out .4s)
+
+    li
+      color: inherit
+      list-style-type: square
+
+    .circle
+      +border-radius(50%)
+      border: 3px solid white
+      background-color: lighten($brand-grey, 80%)
+      position: absolute
+      top: 0
+      left: 50%
+      margin-left: -75px
+      +square(150px)
+      +transition(all .2s ease-in-out .2s)
+      +opacity(0)
+
+
+  &.active
+    margin: $base-line-height*3 0
+    > li
+      margin-top: 200px
+      .circle
+        margin-top: -180px
+        +opacity(1)
+        +scale(1.2)
+
+  h2
+    text-align: center
+    +trailer(1)
+
+.learn-more
+  display: block
+  +btn-pseudo-states(mix($brand-blue, $brand-green-lt, 30%), mix($brand-blue, $brand-green-lt, 30%))
+  +trailer(1)
+
+//-----------------------------------------
+// Keyframe animations
+//-----------------------------------------
+@include keyframes(slide-in-1)
+  0%
+    +opacity(0)
+
+  25%
+    +opacity(1)
+
+  100%
+    +opacity(.3)
+
+@include keyframes(slide-in-2)
+  0%
+    +opacity(0)
+
+  25%
+    +opacity(1)
+
+  75%
+    +opacity(1)
+
+  100%
+    +opacity(.3)
+
+@include keyframes(slide-in)
+  0%
+    +opacity(0)
+
+  100%
+    +opacity(1)

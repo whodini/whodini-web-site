@@ -8,7 +8,7 @@ GIT
 PATH
   remote: /Users/timtowles/Projects/whodini-web-common
   specs:
-    whodini_main (0.0.6)
+    whodini_main (0.0.8)
       compass-h5bp
       compass-rails
       compass-recipes
@@ -46,6 +46,9 @@ GEM
     activesupport (3.2.14)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
+    animation (0.1.alpha.3)
+      compass (>= 0.12.0)
+      sass (>= 3.2.0.alpha.95)
     arel (3.0.2)
     builder (3.0.4)
     cap_git_tools (0.9.1)
@@ -204,6 +207,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  animation
   cap_git_tools
   capawsext (>= 0.2)
   capistrano

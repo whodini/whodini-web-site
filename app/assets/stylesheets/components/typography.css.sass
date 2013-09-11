@@ -1,0 +1,65 @@
+// @import url(http://fonts.googleapis.com/css?family=Handlee)
+
+@import "compass/typography/vertical_rhythm"
+@include establish-baseline
+
+html, body
+  -webkit-font-smoothing: antialiased
+  font-family: 'Helvetica Neue', sans-serif
+  color: lighten($brand-grey, 10%)
+
+h1
+  font-weight: normal
+  @include adjust-font-size-to(36px)
+
+h2
+  @include adjust-font-size-to(24px)
+  @include leader(0)
+
+h3
+  @include adjust-font-size-to(20px)
+
+h4
+  @include adjust-font-size-to(18px)
+
+h5
+  +adjust-font-size-to(18px)
+  @include leader(0)
+  @include trailer(.5)
+  color: $brand-green-lt
+
+h1, h2, h3, h4
+  color: black
+
+p
+  +leader(0)
+  +adjust-font-size-to(16px)
+
+a
+  color: $brand-blue
+  &:hover,
+  &:focus,
+  &:active,
+  &.active
+    color: darken($brand-blue, 10%)
+
+// Centered Headings and subhead for any page ie:
+// <hgroup>
+//   <h1>Lorem</h1>
+//   <p>ipsum</p>
+// </hgroup>
+hgroup
+  text-align: center
+  margin: $base-line-height 0
+  +clearfix
+
+// Useful mixins
+//@rhythm-borders(px, x, x)
+//@leading-border(x, x, x) // border-width, trailer, font-size
+//@include adjust-font-size-to(x);
+//@include adjust-leadin-to(x);
+//@include adjust-font-size-to(x);
+//@include adjust-leading-to(x);
+//@include leader(x);
+//@include trailer(x);
+//@include rhythm(x,x,x,x,$base-font-size); //trailer, padding-trailer, padding-leader, leader, font-size
