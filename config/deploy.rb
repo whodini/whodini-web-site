@@ -36,7 +36,7 @@ default_run_options[:pty] = true
 set :scm, "git"
 set :branch, "master"
 set :deploy_via, :remote_cache
-set :repository,  "https://b869b554d0672dd43377a32d9ec89ada0ce1da6b:x-oauth-basic@github.com/whodini/whodini-web-site.git"
+set :repository,  "https://b9baf1fb4e6db4643c1bf43ca9e0fb64a51cb4ff:x-oauth-basic@github.com/whodini/whodini-web-site.git"
 
 set :rvm_ruby_string, "2.0.0"               # use the same ruby as used locally for deployment
 set :rvm_autolibs_flag, :fail        # more info: rvm help autolibs
@@ -58,7 +58,7 @@ namespace :deploy do
 #   task :restart, :roles => :app, :except => { :no_release => true } do
 #     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
 #   end
-	
+
 	desc "Start the thin process"
 	task :start, :roles => :'app' do
 		run_thin_cmd("start")
