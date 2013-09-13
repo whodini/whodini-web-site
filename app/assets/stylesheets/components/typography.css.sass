@@ -1,7 +1,7 @@
 // @import url(http://fonts.googleapis.com/css?family=Handlee)
 
 @import "compass/typography/vertical_rhythm"
-@include establish-baseline
++establish-baseline
 
 html, body
   -webkit-font-smoothing: antialiased
@@ -10,23 +10,22 @@ html, body
 
 h1
   font-weight: normal
-  @include adjust-font-size-to(36px)
+  +adjust-font-size-to(36px)
 
 h2
-  @include adjust-font-size-to(24px)
-  @include leader(0)
+  +adjust-font-size-to(24px)
+  +leader(0)
 
 h3
-  @include adjust-font-size-to(20px)
+  +adjust-font-size-to(20px)
 
 h4
-  @include adjust-font-size-to(18px)
+  +adjust-font-size-to(18px)
 
 h5
   +adjust-font-size-to(18px)
-  @include leader(0)
-  @include trailer(.5)
-  color: $brand-green-lt
+  +leader(0)
+  +trailer(.5)
 
 h1, h2, h3, h4
   color: black
@@ -52,6 +51,11 @@ hgroup
   text-align: center
   margin: $base-line-height 0
   +clearfix
+
+  p
+    +adjust-font-size-to(20px)
+    +trailer(0)
+
 
 // Useful mixins
 //@rhythm-borders(px, x, x)
