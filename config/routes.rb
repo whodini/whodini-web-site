@@ -55,6 +55,7 @@ WhodiniWebSite::Application.routes.draw do
   root :to => 'welcome#index'
   # redirect_to_whodini_app
   post "/redirect_to_whodini_app"=> "welcome#redirect_to_whodini_app"
+  match '*path' => redirect('/')
 
   # See how all your routes lay out with "rake routes"
 
