@@ -9,9 +9,11 @@ doctype html
 html.no-js
   /!<![endif]
 
-  = render 'head'
+  = render 'styleguide/head'
 
   body class="#{controller.controller_name} #{controller.action_name}"
 
     = render 'chromeframe'
+    = render 'styleguide/header'
     = yield
+    = render 'styleguide/footer'
