@@ -1,5 +1,15 @@
 WhodiniWebSite::Application.routes.draw do
+  mount Nkss::Engine => '/styleguides' if Rails.env.development?
+
   get "welcome/index"
+
+  get '/business-engagement', :to => 'welcome#businessEngagement'
+  get '/solutions', :to => 'welcome#solutions'
+  get '/developer-platform', :to => 'welcome#developerPlatform'
+  get '/about', :to => 'welcome#about'
+  get '/team', :to => 'welcome#team'
+  get '/press', :to => 'welcome#press'
+  get '/contact', :to => 'welcome#contact'
   get '/terms', :to => 'welcome#terms'
   get '/privacy', :to => 'welcome#privacy'
 
@@ -55,12 +65,7 @@ WhodiniWebSite::Application.routes.draw do
   root :to => 'welcome#index'
   # redirect_to_whodini_app
   post "/redirect_to_whodini_app"=> "welcome#redirect_to_whodini_app"
-
-if Rails.env.development?
-    get '/styleguide', :to => 'welcome#styleguide'
-else
-  match '*path' => redirect('/')
-end
+  match '*path' => redirect('/') if Rails.env.production?
 
   # See how all your routes lay out with "rake routes"
 

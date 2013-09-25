@@ -1,0 +1,67 @@
+.primary, .secondary
+  hgroup
+    text-align: center
+    p
+      +adjust-font-size-to(18px)
+
++at-breakpoint($tablet)
+  .primary, .secondary
+    h1
+      +leader(1.5)
+    p:last-child
+      +trailer(5)
+
+.secondary
+  header
+    hgroup
+      p
+        +adjust-font-size-to(16px)
+      p:last-child
+        +trailer(2)
+
+section.staggered
+  padding-top: $base-line-height*2
+
+  .content, figure
+    min-height: 250px
+    margin: 0
+    +span-columns(12 omega)
+
+section.staggered:nth-child(even)
+  background: lighten($brand-grey, 88%)
+  .content, figure
+    float: right
+
+section.staggered:nth-child(odd)
+  .content, figure
+    float: left
+
++at-breakpoint($tablet)
+
+  section.staggered
+    .content
+      +span-columns(5)
+    figure
+      text-align: right
+      +span-columns(4 omega)
+
+  section.staggered:nth-child(even)
+    .content
+      +span-columns(5 omega)
+    figure
+      text-align: left
+      +span-columns(4)
+
++at-breakpoint($desktop)
+  section.staggered
+    .content
+      +span-columns(7)
+    figure
+      +span-columns(5 omega)
+
+  section.staggered:nth-child(even)
+    .content
+      +span-columns(7 omega)
+    figure
+      +span-columns(5)
+

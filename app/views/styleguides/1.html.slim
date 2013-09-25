@@ -1,0 +1,12 @@
+-# This is an example markup for a KSS section.
+-# The definition for `1.1` can be found in your app/assets/stylesheets/ folder.
+
+h1 Whodini CSS <strong>Style</strong> Guide
+p Welcome to the Whodini CSS Styleguide. Before reading this, you should have a general understanding for specificity, the SCSS syntax, and KSS documentation..
+p This guide is based off of Github's wonderful <a href="https://github.com/styleguide/css">internal style guide</a>
+
+p Whodini web applications are mobile first &amp; desktop friendly. We achieve this with the help of <a href="http://susy.oddbird.net/">Sussy</a>. It is important to understand layout with Sussy because it establishes responsive grids unobtrousively on the DOM. Most of the main layout types have been defined here but when fine tuning (hiding, showing, and scaling elements) for different screen sizes you will need to understand the grid definition and breakpoint mechanisms.
+
+
+= kss_block '1.1' do
+  a class="button star $modifier_class" Demo

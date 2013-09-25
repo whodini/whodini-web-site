@@ -1,0 +1,73 @@
+ul.main-nav
+  float: right
+  +inline-list
+  li
+    position: relative
+    text-align: center
+    display: inline-block
+    a
+      display: inline-block
+      padding: $base-line-height/2
+      text-transform: uppercase
+      color: lighten($brand-grey, 30%)
+
+#nav-toggle
+  a
+    // background-color: lighten($brand-grey, 85%)
+    border: 1px solid lighten($brand-grey, 80%)
+    color: white
+    padding: 4px
+    margin-bottom: -11px
+
+    &:hover
+      border: 1px solid lighten($brand-grey, 75%)
+      background-color: lighten($brand-grey, 88%)
+
+
+  span
+    display: block
+    height: 2px
+    width: 20px
+    margin: 4px
+    background-color: lighten($brand-grey, 30%)
+    content: ' '
+
+
+ul.main-nav.team-nav,  ul.main-nav.site-nav
+  display: none
+  position: relative
+  width: 100%
+  background: lighten($brand-grey, 90%)
+  li
+    display: block
+
++at-breakpoint($tablet)
+
+  ul.main-nav
+    li
+      +adjust-font-size-to(14px)
+
+  ul.main-nav.team-nav
+    position: absolute
+    top: $base-line-height*2
+    right: 0
+    width: auto
+
+  ul.main-nav.site-nav
+    display: block
+    width: auto
+    background: none
+    li
+      display: inline-block
+
++at-breakpoint($desktop)
+  ul.main-nav.team-nav, ul.main-nav.site-nav
+    position: static
+    display: block
+    width: auto
+    background: none
+    li
+      display: inline-block
+
+  #nav-toggle
+    display: none

@@ -9,14 +9,31 @@ class WelcomeController < ApplicationController
     redirect_to new_url
   end
 
+  def businessEngagement
+  end
+
+  def solutions
+  end
+
+  def developerPlatform
+  end
+
+  def about
+  end
+
+  def team
+  end
+
+  def press
+  end
+
+  def contact
+  end
+
   def terms
   end
 
   def privacy
-  end
-
-  def styleguide
-    render :layout => 'styleguide'
   end
 
 end

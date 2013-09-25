@@ -1,0 +1,14 @@
+root: '/public/dev-assets'
+title: "Whodini"
+sections:
+  1: Overview
+  2: Typography
+  3: Grid
+  4: Colors
+  5: Buttons
+  6: Navigation
+  7: Lists
+  8: Forms
+  9: Icons
+  10: Alerts
+  11: Empty State

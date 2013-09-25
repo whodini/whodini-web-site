@@ -2,3 +2,4 @@
 gem 'compass-h5bp'
 require 'modular-scale'
 project_type = :rails
+output_style = :expanded

@@ -1,4 +1,5 @@
-.docked
-  header#head
-      = image_tag("whodini_main/whodini_logo_sm.png", :class=> 'whodini-logo')
-      = render 'contact'
+header#header
+  .centered-container
+    a href='/' class="whodini-logo"
+      = image_tag("whodini_main/whodini_logo_sm.png")
+    = render 'main_nav'

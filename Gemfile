@@ -11,7 +11,7 @@ gem 'whodini_main', git: "https://b869b554d0672dd43377a32d9ec89ada0ce1da6b:x-oau
 # for local development:
 
 # for local development:
-# gem 'whodini_main', path: "/Users/timtowles/Projects/whodini-web-common"
+# gem 'whodini_main', path: "/Users/<username>/Projects/whodini-web-common"
 
 # Needs to be outside of assets group because it’s needed in production
 # Use a patched version with an updated r.js file
@@ -27,7 +27,7 @@ group :assets do
   gem 'modular-scale'
   gem 'susy' #robust grid system: http://susy.oddbird.net/#susy-oddbird-net
   gem 'compass-h5bp'
-  # gem 'haml-rails'
+  gem 'haml-rails'
   gem 'slim-rails'
 
   gem 'animation'
@@ -36,6 +36,8 @@ group :assets do
   gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  # gem 'nkss-rails', github: 'nadarei/nkss-rails'
+  gem 'nkss-rails', path: 'vendor/nkss-rails'
 end
 
 gem 'jquery-rails'

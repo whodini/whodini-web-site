@@ -1,0 +1,35 @@
+
+$total-columns: 12
+$column-width: 4em
+$gutter-width: 1em
+$grid-padding: $gutter-width
+$break: 12
+
+$tablet: 9
+$desktop: 55em 12
+
+
+.centered-container
+  +transition(all .2s ease-in-out)
+  +container($total-columns, $tablet, $desktop)
+  overflow: auto
+  // +susy-grid-background
+  .col-3
+    +span-columns(12)
+
++at-breakpoint($tablet)
+  .centered-container
+    // +susy-grid-background
+    // background: red
+    .col-3
+      +span-columns(3)
+      &:last-child
+        +span-columns(3 omega)
+
++at-breakpoint($desktop)
+  .centered-container
+    // +susy-grid-background
+    .col-3
+      +span-columns(4)
+      &:last-child
+        +span-columns(4 omega)

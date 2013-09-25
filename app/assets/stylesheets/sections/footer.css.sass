@@ -1,0 +1,29 @@
+#footer
+  background-color: lighten($brand-grey, 90%)
+
+  ul
+    padding: 0
+    +leader(0)
+    li
+      list-style-type: none
+      display: inline-block
+      margin: 0 $base-line-height/2 0 0
+
+    a
+      color: lighten($brand-grey, 45%)
+      font-weight: 300
+      &:hover,
+      &:focus,
+      &:active,
+      &.active
+        color: $brand-orange
+  p
+    font-weight: 300
+
+  hr
+    border-top: 1px solid lighten($brand-grey, 75%)
+
+  h4
+    color: $brand-orange
+    text-transform: uppercase
+    font-weight: 400

@@ -1,50 +1,57 @@
-//-----------------------------------------
-// Variables
-//-----------------------------------------
+// ----------------------------------------------------------------------------
+// These styles depend upon the whodini-web-common engine. The engine defines common
+// UI tools such as Compass, h5bp, sussy etc.
+// ----------------------------------------------------------------------------
 
-//-----------------------------------------
-// Vendor imports
-//-----------------------------------------
-@import compass
-@import recipes
-@import h5bp
-@import susy
-@import modular-scale
+// Lowest level style definitions
+@import whodini_main/application_new
 
-//-----------------------------------------
-// Vendor includes
-//-----------------------------------------
-@include h5bp-normalize
 
-@include h5bp-main
-@include h5bp-chromeframe
-@include h5bp-helpers
+// 1: Overview
+// 2: Typography
+// 3: Grid
+// 4: Colors
+// 5: Buttons
+// 6: Navigation
+// 7: Lists
+// 8: Forms
+// 9: Icons
+// 10: Alerts
+// 11: Empty State
 
-// https://github.com/ericam/compass-animation
-@import animation
+/* A button suitable for giving stars to someone.
+  *
+  * .stars-given       - A highlight indicating you've already given a star.
+  *
+  * Styleguide 1.1. */
 
-// http://compass-style.org/help/tutorials/spriting/
-@import "sprites/*.png"
-//-----------------------------------------
-// Custom imports
-//-----------------------------------------
+a.button.star
+  color: red
+a.button.star.stars-given
+  color: blue
+/* Overview */
 
-// Global Styles
-@import whodini_main/application
-@import globals/variables
+/* Sophistaced, Elegant, Clear. Whodini's type heirarchy aims to communicate this
+  *
+  * Styleguide 2.1. */
 
-// Locally scoped (global to this app) Styles
-@import globals/layout
+/* Styleguide 2.2. */
+@import whodini_main/new_style/components/typography
 
-@import compass/layout
-@include sticky-footer($base-line-height*2)
+/* Styleguide 3.1. */
+@import whodini_main/new_style/components/grid
 
-// Components
-@import components/header.css.sass
-@import components/footer.css.sass
-@import components/typography.css.sass
+/* Styleguide 4.1. */
 
-// Sections
-@import sections/welcome.css.sass
-@import sections/sign_up.css.sass
+/* Styleguide 5.1. */
+@import whodini_main/new_style/components/buttons
 
+@import whodini_main/new_style/components/forms
+
+@import components/grid
+@import components/main_nav
+
+@import shared/layout
+
+@import sections/header
+@import sections/footer

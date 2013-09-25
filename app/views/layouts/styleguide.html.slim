@@ -1,3 +1,9 @@
+-# This is the layout that the styleguide uses.
+-# The actual body is stored in `:body`, and Styleguide stylesheets
+-# are in `:head`.
+-#
+-# You may customize this by adding your own scripts and styles.
+
 doctype html
 /[if lt IE 7]
   |<html class='no-js lt-ie9 lt-ie8 lt-ie7'>
@@ -9,11 +15,19 @@ doctype html
 html.no-js
   /!<![endif]
 
-  = render 'styleguide/head'
+  meta charset='utf-8'
+  title Styleguides
+  = stylesheet_link_tag 'application'
 
-  body class="#{controller.controller_name} #{controller.action_name}"
+  /[if lt IE 9]
+  script src = 'http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js'
+  = yield :head  if content_for?(:head)
 
-    = render 'chromeframe'
-    = render 'styleguide/header'
-    = yield
-    = render 'styleguide/footer'
+  body
+    = yield :body  if content_for?(:body)
+
+
+
+
+
+
