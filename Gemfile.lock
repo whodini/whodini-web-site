@@ -1,4 +1,15 @@
 GIT
+  remote: git://github.com/nadarei/nkss-rails.git
+  revision: 15e1a992111a46c7e3c37c59747c1a62d6ae19f2
+  specs:
+    nkss-rails (0.0.1)
+      bluecloth
+      ffaker
+      haml
+      kss
+      rails (>= 3.2.0)
+
+GIT
   remote: https://b869b554d0672dd43377a32d9ec89ada0ce1da6b:x-oauth-basic@github.com/whodini/whodini-web-common.git
   revision: 01a5c59df04343119c5a57668a9a71c50acfe056
   specs:
@@ -16,16 +27,6 @@ GIT
   specs:
     requirejs-rails (0.9.1)
       railties (>= 3.1.1, < 4.1)
-
-PATH
-  remote: vendor/nkss-rails
-  specs:
-    nkss-rails (0.0.1)
-      bluecloth
-      ffaker
-      haml
-      kss
-      rails (>= 3.2.0)
 
 GEM
   remote: https://rubygems.org/
