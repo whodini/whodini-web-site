@@ -1,25 +1,18 @@
 ul.main-nav.product-nav
-  li
-    = link_to "Try It", ''
-  li
-    = link_to "Log In", ''
+  li = link_to "Try Whodini", ''
+  li = link_to "Log In", ''
   li#nav-toggle
     a href="#"
       span
       span
       span
 
-ul.main-nav.team-nav
-  li
-    = link_to "Press", '/press'
-  li
-    = link_to "Contact Us", '/contact'
+/ ul.main-nav.team-nav
+/   li = link_to "Press", company_press_path
+/   li = link_to "Contact Us", contact_path
 
 ul.main-nav.site-nav
-  li
-    = link_to "BE", '/business-engagement'
-  li
-    = link_to "Solutions", '/solutions'
-  li
-    = link_to "Developer Platform", '/developer-platform'
+  li = link_to "Engagement", technology_businessEngagement_path
+  li = link_to "Solutions", technology_solutions_path
+  li = link_to "Developers", technology_developerPlatform_path
 

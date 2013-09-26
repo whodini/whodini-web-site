@@ -1,39 +1,34 @@
 footer#footer
   .centered-container
 
-    h4 Our Technology
-    ul
-      li
-        = link_to "BE", '/business-engagement'
-      li
-        = link_to "Solutions", '/solutions'
-      li
-        = link_to "Developer Platform", '/developer-platform'
-      li
-        = link_to "Try It", '/'
+    .footer-column
+      h4 Our Technology
+      ul
+        li = link_to "BE", technology_businessEngagement_path
+        li = link_to "Solutions", technology_solutions_path
+        li = link_to "Developer Platform", technology_developerPlatform_path
+        li = link_to "Try It", '/'
 
-    h4 Company
-    ul
-      li
-        = link_to "About Us", '/about'
-      li
-        = link_to "Our Team", '/team'
-      li
-        = link_to "Advisors", '/advisors'
-      li
-        = link_to "Investors", '/investors'
-      li
-        = link_to "Careers", '/careers'
-      li
-        = link_to "Contact Us", '/contact'
-      li
-        = link_to "Terms", '/terms'
-      li
-        = link_to "Privacy", '/privacy'
+    .footer-column
+      h4 Company
+      ul
+        li = link_to "About Us", company_about_path
+        li = link_to "Our Team", company_team_path
+        li = link_to "Contact Us", contact_path
+        li = link_to "Careers", company_careers_path
+        li = link_to "Press", company_press_path
+        li = link_to "Publications", company_publications_path
+        li = link_to "Advisors", company_advisors_path
+        li = link_to "Investors", company_investors_path
 
-    hr
+    .footer-column
+      h4 Legal
+      ul
+        li = link_to "Terms of Use", terms_path
+        li = link_to "Privacy", privacy_path
+        li Copyright &copy #{Time.now.year} Whodini Inc.
 
-    p Copyright &copy #{Time.now.year} Whodini Inc. <br /><small>Any of the trademarks, service marks, collective marks, design rights or similar rights that are mentioned, used or cited in the Whodini website are the property of their respective owners.</small>
+    / hr
 
 javascript:
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

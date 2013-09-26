@@ -1,0 +1,45 @@
+section
+  .centered-container
+    = form_for @message, :url => contact_path do |form|
+      fieldset.fields
+        .field
+          = form.label :first
+          = form.text_field :first
+        .field
+          = form.label :last
+          = form.text_field :last
+        .field
+          = form.label :email
+          = form.text_field :email
+        .field
+          = form.label :subject
+          = form.text_field :subject
+        .field
+          = form.label :body
+          = form.text_area :body
+      fieldset.actions
+        = form.submit "Send"
+
+
+      h3 Whodini HQ
+      p Whodini, Inc. is based out of Los Altos, CA in the heart of Silicon Valley.
+      address
+        | 335 Main St, Suite B <br>
+        | Los Altos, CA 94022 <br>
+        = link_to "info@whodini.com", 'mailto:info@whodini.com'
+
+      h3 Support
+      p At Whodini we take customer service and support seriously.  If you have an issue, we want to resolve it. Fast.
+      p Support Line: 650.308.8999
+      = link_to "support@whodini.com", 'mailto:support@whodini.com'
+      = link_to "You can also consult our help document:", 'Whodini_Manual.pdf'
+
+      h3 Sales
+      p Contact Sales to start the conversation about how Whodini can help your business.
+      p Phone: 650.618.5677
+      = link_to "sales@whodini.com", 'mailto:sales@whodini.com'
+
+      h3 Press
+      p Please direct press or media inquires to:
+      = link_to "info@whodini.com", 'mailto:info@whodini.com'
+      p Phone: 650.618.5677
