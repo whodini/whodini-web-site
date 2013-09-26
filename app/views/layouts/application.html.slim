@@ -11,8 +11,15 @@ html.no-js
 
   = render 'head'
   body class="#{controller.controller_name} #{controller.action_name}"
+
     = render 'chromeframe'
     =render 'header'
+    section
+      .centered-container
+        - if flash[:alert]
+          p.flash-error= flash[:alert]
+        - if flash[:notice]
+          p.flash-notice= flash[:notice]
     = yield
     = render 'footer'
 
