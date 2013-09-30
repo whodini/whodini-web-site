@@ -1,18 +1,17 @@
 // Main Header
 // --------------------------------------------------------------------
-.primary, .secondary
-  header
-    +span-columns(12)
+header
+  +span-columns(12)
 
-  hgroup
-    text-align: center
-    p
-      +adjust-font-size-to(20px)
+hgroup
+  text-align: center
+  p
+    +adjust-font-size-to(20px)
 
 .primary
   h1
     strong
-      color: $brand-orange
+      color: $brand-green-lt
 
 // Secondary Header
 // --------------------------------------------------------------------
@@ -32,7 +31,7 @@ section.staggered
   padding-top: $base-line-height*2
 
   .content, figure
-    min-height: 250px
+    min-height: 200px
     margin: 0
     +span-columns(12 omega)
 
