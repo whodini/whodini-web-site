@@ -50,6 +50,8 @@ section.staggered:nth-child(odd)
 section.articles
   article
     +span-columns(12)
+    // height: 1000px
+    // border-bottom: 1px solid red
 
 // Tablet Breakpoint (9 columns default)
 // --------------------------------------------------------------------
@@ -77,14 +79,13 @@ section.articles
 
   section.articles
     article
-      +span-columns(3,9) // each gallery-image is 3 of 9 cols.
-      &:nth-child(3n+3)
-        +omega
+      // +span-columns(3)
+      // &:nth-child(3n+3)
+      //   +omega
 
 // Desktop Breakpoint (12 columns default)
 // --------------------------------------------------------------------
 +at-breakpoint($desktop)
-
   .primary, .secondary
     header
       +span-columns(11)
@@ -104,8 +105,7 @@ section.articles
 
   section.articles
     article
-      +span-columns(3,12) // each gallery-image is 2 of 12 cols.
-      // +nth-omega(3n)
-      &:nth-child(3n+3)
+      +span-columns(3)
+      &:nth-child(4n+4)
         +omega
 
