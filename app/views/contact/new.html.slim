@@ -1,9 +1,15 @@
+section.primary
+  .centered-container
+    header
+      hgroup
+        h1 Whodini HQ
+        p Whodini, Inc. is based out of Los Altos, CA in the heart of Silicon Valley.
+
 section
   .centered-container
       .left
-        h3 Whodini HQ
-        p Whodini, Inc. is based out of Los Altos, CA in the heart of Silicon Valley.
         address
+          h3 Whodini
           | 335 Main St, Suite B <br>
           | Los Altos, CA 94022 <br>
           = link_to "info@whodini.com", 'mailto:info@whodini.com'
@@ -16,8 +22,8 @@ section
           = link_to " 650.308.8999 ", "tel:+1650308.8999"
           | Email:
           = link_to " support@whodini.com", 'mailto:support@whodini.com'
-        br
-        = link_to "You can also consult our help document:", 'Whodini_Manual.pdf'
+
+        / = link_to "You can also consult our help document:", 'Whodini_Manual.pdf'
 
         h3 Sales
         p Contact Sales to start the conversation about how Whodini can help your business.
@@ -40,21 +46,18 @@ section
       .right
         = form_for @message, :url => contact_path do |form|
           fieldset.fields
-            .field
-              = form.label :first_name
-              = form.text_field :first_name
-            .field
-              = form.label :last_name
-              = form.text_field :last_name
-            .field
+              .left
+                = form.label :first_name
+                = form.text_field :first_name
+              .right
+                = form.label :last_name
+                = form.text_field :last_name
               = form.label :email
               = form.text_field :email
-            .field
               = form.label :subject
               = form.text_field :subject
-            .field
               = form.label :body
-              = form.text_area :body
+              = form.text_area :body, :rows => "4"
           fieldset.actions
             = form.submit "Send", :class=> "btn"
 
