@@ -28,11 +28,9 @@ require [
               event.preventDefault()
 
               if $('.site-nav').find('li').css('display') is 'inline-block'
-                # dont show/hide the site-nav
+
               else
                 $('.site-nav').toggle()
-
-              $('.team-nav').toggle()
             )
 
         activatePoints: ->

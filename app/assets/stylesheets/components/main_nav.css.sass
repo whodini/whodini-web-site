@@ -3,6 +3,11 @@ ul.main-nav
   font-weight: 400
   +inline-list
 
+  &.product-nav
+    display: block
+    width: 100%
+    text-align: center
+
   li
     position: relative
     text-align: center
@@ -39,7 +44,7 @@ ul.main-nav
     content: ' '
 
 
-ul.main-nav.team-nav,  ul.main-nav.site-nav
+ul.main-nav.site-nav
   display: none
   position: relative
   width: 100%
@@ -52,24 +57,15 @@ ul.main-nav.team-nav,  ul.main-nav.site-nav
   ul.main-nav
     li
       +adjust-font-size-to(14px)
-
-  ul.main-nav.team-nav
-    position: absolute
-    top: $base-line-height*2
-    right: 0
-    width: auto
+      a
+        padding: $base-line-height/1.5 $base-line-height/2
+    &.product-nav
+      display: inline
+      width: auto
 
   ul.main-nav.site-nav
-    display: block
-    width: auto
-    background: none
-    li
-      display: inline-block
-
-+at-breakpoint($desktop)
-  ul.main-nav.team-nav, ul.main-nav.site-nav
     position: static
-    display: block
+    display: block!important
     width: auto
     background: none
     li
@@ -77,3 +73,13 @@ ul.main-nav.team-nav,  ul.main-nav.site-nav
 
   #nav-toggle
     display: none
+
++at-breakpoint($desktop)
+
+  ul.main-nav
+    li
+      a
+        padding: $base-line-height/1.5
+
+
+
