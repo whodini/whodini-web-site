@@ -12,9 +12,9 @@ $desktop: 55em 12
 .centered-container
   +transition(all .2s ease-in-out)
   +container($total-columns, $tablet, $desktop)
-  overflow: auto
+  overflow: hidden
   // +susy-grid-background
-  .col-3
+  .col-3, .left, .right
     +span-columns(12)
 
 +at-breakpoint($tablet)
@@ -24,7 +24,14 @@ $desktop: 55em 12
     .col-3
       +span-columns(3)
       &:last-child
-        +span-columns(3 omega)
+        +omega
+
+    .left, .right
+      +span-columns(5)
+
+    .right
+      +span-columns(4)
+      +omega
 
 +at-breakpoint($desktop)
   .centered-container
@@ -33,3 +40,9 @@ $desktop: 55em 12
       +span-columns(4)
       &:last-child
         +span-columns(4 omega)
+
+    .left, .right
+      +span-columns(6)
+
+    .right
+      +omega

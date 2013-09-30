@@ -1,17 +1,24 @@
+// Main Header
+// --------------------------------------------------------------------
 .primary, .secondary
+  header
+    +span-columns(12)
+
   hgroup
     text-align: center
     p
-      +adjust-font-size-to(18px)
+      +adjust-font-size-to(20px)
 
-+at-breakpoint($tablet)
-  .primary, .secondary
-    h1
-      +leader(1.5)
-    p:last-child
-      +trailer(5)
+.primary
+  h1
+    strong
+      color: $brand-orange
 
+// Secondary Header
+// --------------------------------------------------------------------
 .secondary
+  background-color:  lighten($brand-grey, 88%)
+  padding: $base-line-height*2
   header
     hgroup
       p
@@ -19,6 +26,8 @@
       p:last-child
         +trailer(2)
 
+// Staggered Sections
+// --------------------------------------------------------------------
 section.staggered
   padding-top: $base-line-height*2
 
@@ -36,7 +45,21 @@ section.staggered:nth-child(odd)
   .content, figure
     float: left
 
+// 4 up Grid
+// --------------------------------------------------------------------
+section.articles
+  article
+    +span-columns(12)
+
+// Tablet Breakpoint (9 columns default)
+// --------------------------------------------------------------------
 +at-breakpoint($tablet)
+
+  .primary, .secondary
+    h1
+      +leader(1.5)
+    p:last-child
+      +trailer(5)
 
   section.staggered
     .content
@@ -52,7 +75,21 @@ section.staggered:nth-child(odd)
       text-align: left
       +span-columns(4)
 
+  section.articles
+    article
+      +span-columns(3,9) // each gallery-image is 3 of 9 cols.
+      &:nth-child(3n+3)
+        +omega
+
+// Desktop Breakpoint (12 columns default)
+// --------------------------------------------------------------------
 +at-breakpoint($desktop)
+
+  .primary, .secondary
+    header
+      +span-columns(11)
+      +prefix(1)
+
   section.staggered
     .content
       +span-columns(7)
@@ -64,4 +101,11 @@ section.staggered:nth-child(odd)
       +span-columns(7 omega)
     figure
       +span-columns(5)
+
+  section.articles
+    article
+      +span-columns(3,12) // each gallery-image is 2 of 12 cols.
+      // +nth-omega(3n)
+      &:nth-child(3n+3)
+        +omega
 

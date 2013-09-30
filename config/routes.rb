@@ -3,14 +3,17 @@ WhodiniWebSite::Application.routes.draw do
 
   get "welcome/index"
 
-  get '/business-engagement', :to => 'welcome#businessEngagement'
-  get '/solutions', :to => 'welcome#solutions'
-  get '/developer-platform', :to => 'welcome#developerPlatform'
-  get '/about', :to => 'welcome#about'
-  get '/team', :to => 'welcome#team'
-  get '/press', :to => 'welcome#press'
-  get '/terms', :to => 'welcome#terms'
-  get '/privacy', :to => 'welcome#privacy'
+  # generate named routes for whodini sections based on action names
+  CompanyController.action_methods.each do |action|
+    get "company/#{action}", to: "company##{action}"
+  end
+
+  TechnologyController.action_methods.each do |action|
+    get "technology/#{action}", to: "technology##{action}"
+  end
+
+  match 'terms' => 'welcome#terms', :as => '/terms'
+  match 'privacy' => 'welcome#privacy', :as => '/privacy'
 
   # redirect_to_whodini_app
   post "/redirect_to_whodini_app"=> "welcome#redirect_to_whodini_app"

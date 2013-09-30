@@ -1,15 +1,21 @@
 ul.main-nav
   float: right
+  font-weight: 400
   +inline-list
+
   li
     position: relative
     text-align: center
     display: inline-block
-    a
-      display: inline-block
-      padding: $base-line-height/2
-      text-transform: uppercase
-      color: lighten($brand-grey, 30%)
+
+    &.current
+      a
+        color: black
+  a
+    display: inline-block
+    padding: $base-line-height/1.5
+    text-transform: uppercase
+    color: lighten($brand-grey, 45%)
 
 #nav-toggle
   a

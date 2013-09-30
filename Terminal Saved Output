@@ -1,0 +1,34 @@
+                   nkss      /styleguides                           Nkss::Engine
+          welcome_index GET  /welcome/index(.:format)               welcome#index
+                        GET  /company/business-engagement(.:format) welcome#businessEngagement
+      company_solutions GET  /company/solutions(.:format)           welcome#solutions
+                        GET  /company/developer-platform(.:format)  welcome#developerPlatform
+          company_about GET  /company/about(.:format)               welcome#about
+           company_team GET  /company/team(.:format)                welcome#team
+   company_publications GET  /company/publications(.:format)        company#publications
+          company_press GET  /company/press(.:format)               welcome#press
+          company_terms GET  /company/terms(.:format)               welcome#terms
+        company_privacy GET  /company/privacy(.:format)             welcome#privacy
+redirect_to_whodini_app POST /redirect_to_whodini_app(.:format)     welcome#redirect_to_whodini_app
+                contact GET  /contact(.:format)                     contact#new
+                contact POST /contact(.:format)                     contact#create
+                   root      /                                      welcome#index
+
+Routes for Nkss::Engine:
+root     /                   styleguides#index
+ all GET /all(.:format)      styleguides#all
+     GET /:section(.:format) styleguides#show
+timtowles at Tims-MacBook-Air-2 in ~/Projects/whodini-web-site on master*
+$ rails s
+
+
+
+
+
+
+
+
+
+
+
+

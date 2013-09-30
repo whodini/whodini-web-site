@@ -3,6 +3,8 @@ paths:
   underscore: 'underscore'
   jquery-spin: 'plugins/jquery/jquery.spin'
   spin: 'plugins/jquery/spin'
+  ghosttype: 'plugins/jquery/jquery.ghosttype-1.2'
+
 shim:
   'jquery':
     exports: '$'
@@ -10,3 +12,5 @@ shim:
     exports: '_'
   'jquery-spin':
     deps: ['jquery', 'spin']
+  'ghosttype':
+    deps: ['jquery']

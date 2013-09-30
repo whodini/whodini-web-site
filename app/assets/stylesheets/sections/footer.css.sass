@@ -1,12 +1,31 @@
 #footer
   background-color: lighten($brand-grey, 90%)
+  border-top: 1px solid lighten($brand-grey, 85%)
+
+  .footer-column
+    +span-columns(12 omega)
+
+    .btn
+      display: block
+
+  +at-breakpoint($tablet)
+    .footer-column
+      +span-columns(2)
+      &:last-child
+        +span-columns(3 omega)
+
+  +at-breakpoint($desktop)
+    .footer-column
+      +span-columns(3)
+      &:last-child
+        +span-columns(3 omega)
 
   ul
     padding: 0
     +leader(0)
     li
       list-style-type: none
-      display: inline-block
+      // display: inline-block
       margin: 0 $base-line-height/2 0 0
 
     a
@@ -27,3 +46,4 @@
     color: $brand-orange
     text-transform: uppercase
     font-weight: 400
+    +leader(1)

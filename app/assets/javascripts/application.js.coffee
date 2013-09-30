@@ -3,6 +3,7 @@ require [
     'underscore'
     'jquery-spin'
     'welcome'
+    'ghosttype'
 ], ($, ConfigManager) ->
 
   # Start up the app once the DOM is ready
@@ -12,14 +13,17 @@ require [
     whodini =
         initialize: ->
             console.log 'init Whodini'
-            # pointsPosition = $("#points").position().top-400
-            # $(document).scroll ->
-            #     whodini.activatePoints()  if $(@).scrollTop() >= pointsPosition
-            #     whodini.deactivatePoints()  if $(@).scrollTop() <= pointsPosition
-            # $('.main-nav > li a').on('click', (event) ->
-            #   event.preventDefault() if $(event.target).parent().find('ul').length > 0
-            #   console.log $(event.target).parent().find('ul').toggle()
-            # )
+
+            setTimeout ->
+              $("#searchField").focus().teletype
+                animDelay: 50 # the bigger the number the slower the typing
+                text: "project management"
+            ,30
+
+            setTimeout ->
+              $('#scoreTags li').addClass('active')
+            ,1000
+
             $('#nav-toggle').on('click', (event) ->
               event.preventDefault()
 
@@ -29,16 +33,6 @@ require [
                 $('.site-nav').toggle()
 
               $('.team-nav').toggle()
-              # if $('.team-nav').is(":visible")
-              #   $('.team-nav, .site-nav').hide()
-              # else
-              #   $('.team-nav, .site-nav').show()
-
-              # if $('.site-nav').is(":visible")
-              #   $('.site-nav').hide()
-              # else
-              #   $('.site-nav').show()
-
             )
 
         activatePoints: ->
