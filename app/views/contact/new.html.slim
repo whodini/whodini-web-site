@@ -14,17 +14,6 @@ section
           | Los Altos, CA 94022 <br>
           = link_to "info@whodini.com", 'mailto:info@whodini.com'
 
-        / h3 Support
-        / p At Whodini we take customer service and support seriously.  If you have an issue, we want to resolve it. Fast.
-
-        / p
-        /   |Phone:
-        /   = link_to " 650.308.8999 ", "tel:+1650308.8999"
-        /   | Email:
-        /   = link_to " support@whodini.com", 'mailto:support@whodini.com'
-
-        / = link_to "You can also consult our help document:", 'Whodini_Manual.pdf'
-
         h3 Sales
         p Contact Sales to start the conversation about how Whodini can help your business.
 
@@ -34,30 +23,19 @@ section
           | Email:
           = link_to " sales@whodini.com", 'mailto:sales@whodini.com'
 
-        / h3 Press
-        / p Please direct press or media inquires to:
-
-        / p
-        /   |Phone:
-        /   = link_to " 650.618.5677 ", "tel:+16506185677"
-        /   | Email:
-        /   = link_to " info@whodini.com", 'mailto:info@whodini.com'
-
       .right
-        = form_for @message, :url => contact_path do |form|
+        = form_for @message, :url => contact_path do |f|
           fieldset.fields
               .left
-                = form.label :first_name
-                = form.text_field :first_name
+                = f.label :first_name
+                = f.text_field :first_name
               .right
-                = form.label :last_name
-                = form.text_field :last_name
-              = form.label :email
-              = form.text_field :email
-              = form.label :subject
-              = form.text_field :subject
-              = form.label :body
-              = form.text_area :body, :rows => "4"
+                = f.label :last_name
+                = f.text_field :last_name
+              = f.label :email
+              = f.text_field :email
+              = f.label :body, 'Message'
+              = f.text_area :body, :rows => "4"
           fieldset.actions
-            = form.submit "Send", :class=> "btn"
+            = f.submit "Send", :class=> "btn"
 

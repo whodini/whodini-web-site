@@ -14,6 +14,11 @@ require [
         initialize: ->
             console.log 'init Whodini'
 
+            $('.close').click( (event) ->
+              event.preventDefault()
+              $(event.target).parent().hide('fast')
+            )
+
             setTimeout ->
               $("#searchField").focus().teletype
                 animDelay: 50 # the bigger the number the slower the typing

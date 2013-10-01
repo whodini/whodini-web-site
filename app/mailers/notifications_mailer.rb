@@ -5,6 +5,7 @@ class NotificationsMailer < ActionMailer::Base
 
   def new_message(message)
     @message = message
-    mail(:subject => "[whodini.com] #{message.subject}")
+    # mail(:subject => "[whodini.com] #{message.subject}")
+    mail(:subject => "[whodini.com] Whodini Contact Page Message")
   end
 end

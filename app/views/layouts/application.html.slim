@@ -17,9 +17,13 @@ html.no-js
     section
       .centered-container
         - if flash[:alert]
-          p.flash-error= flash[:alert]
+          p.flash-error
+            a href="#" class="close" x
+            = flash[:alert]
         - if flash[:notice]
-          p.flash-notice= flash[:notice]
+          p.flash-notice
+            a href="#" class="close" x
+            = flash[:notice]
     = yield
     = render 'footer'
 
