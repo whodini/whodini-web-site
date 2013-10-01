@@ -24,6 +24,10 @@ WhodiniWebSite::Application.routes.draw do
   match 'contact' => 'contact#new', :as => 'contact', :via => :get
   match 'contact' => 'contact#create', :as => 'contact', :via => :post
 
+  # try whodini mailer
+  match 'try' => 'try#new', :as => 'try', :via => :get
+  match 'try' => 'try#create', :as => 'try', :via => :post
+
   root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"

@@ -1,0 +1,19 @@
+section
+  .centered-container
+
+    .left
+      h2 Try Whodini
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+
+    .right
+      = form_for @try, :url => try_path do |f|
+        fieldset.fields
+            = f.label :name
+            = f.text_field :name
+            = f.label :email
+            = f.text_field :email
+            = f.label :company
+            = f.text_field   :company
+        fieldset.actions
+          = f.submit "Send", :class=> "btn"
+
