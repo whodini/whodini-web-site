@@ -27,15 +27,11 @@
       list-style-type: none
       // display: inline-block
       margin: 0 $base-line-height/2 0 0
-
+      color: lighten($brand-grey, 45%)
     a
       color: lighten($brand-grey, 45%)
       font-weight: 300
-      &:hover,
-      &:focus,
-      &:active,
-      &.active
-        color: $brand-green-lt
+
   p
     font-weight: 300
 
@@ -43,7 +39,7 @@
     border-top: 1px solid lighten($brand-grey, 75%)
 
   h4
-    color: $brand-green-lt
+    color: mix($brand-green-lt, $brand-green-dk, 50%)
     text-transform: uppercase
     font-weight: 400
     +leader(1)

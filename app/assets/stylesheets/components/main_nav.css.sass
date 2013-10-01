@@ -13,18 +13,20 @@ ul.main-nav
     text-align: center
     display: inline-block
 
-    &.current
-      a
-        color: black
-  a
-    display: inline-block
-    padding: $base-line-height/1.5
-    text-transform: uppercase
-    color: lighten($brand-grey, 45%)
+    a
+      display: inline-block
+      padding: $base-line-height/1.5
+      text-transform: uppercase
+      text-decoration: none
+      color: lighten($brand-grey, 45%)
 
+    &.current a, a:hover
+      color: black
+      background: lighten($brand-grey, 86%)
+
+// toggle control that shows up only on phones
 #nav-toggle
   a
-    // background-color: lighten($brand-grey, 85%)
     border: 1px solid lighten($brand-grey, 80%)
     color: white
     padding: 4px
@@ -34,7 +36,6 @@ ul.main-nav
       border: 1px solid lighten($brand-grey, 75%)
       background-color: lighten($brand-grey, 88%)
 
-
   span
     display: block
     height: 2px
@@ -43,7 +44,6 @@ ul.main-nav
     background-color: lighten($brand-grey, 30%)
     content: ' '
 
-
 ul.main-nav.site-nav
   display: none
   position: relative
@@ -51,7 +51,11 @@ ul.main-nav.site-nav
   background: lighten($brand-grey, 90%)
   li
     display: block
+    a
+      width: 100%
 
+// Tablet Breakpoint (9 columns default)
+// --------------------------------------------------------------------
 +at-breakpoint($tablet)
   ul.main-nav
     li
@@ -73,8 +77,9 @@ ul.main-nav.site-nav
   #nav-toggle
     display: none
 
+// Desktop Breakpoint (12 columns default)
+// --------------------------------------------------------------------
 +at-breakpoint($desktop)
-
   ul.main-nav
     li
       a
