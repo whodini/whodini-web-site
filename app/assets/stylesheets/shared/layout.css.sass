@@ -67,17 +67,17 @@ section.articles
 
   section.staggered
     .content
-      +span-columns(5)
-    figure
-      text-align: right
-      +span-columns(4 omega)
-
-  section.staggered:nth-child(even)
-    .content
       +span-columns(5 omega)
     figure
       text-align: left
       +span-columns(4)
+
+  section.staggered:nth-child(even)
+    .content
+      +span-columns(5)
+    figure
+      text-align: right
+      +span-columns(4 omega)
 
   section.articles
     article
@@ -95,15 +95,15 @@ section.articles
 
   section.staggered
     .content
-      +span-columns(7)
-    figure
-      +span-columns(5 omega)
-
-  section.staggered:nth-child(even)
-    .content
       +span-columns(7 omega)
     figure
       +span-columns(5)
+
+  section.staggered:nth-child(even)
+    .content
+      +span-columns(7)
+    figure
+      +span-columns(5 omega)
 
   section.articles
     article

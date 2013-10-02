@@ -4,3 +4,29 @@ body.about
   h4
     +leader(0)
     font-weight: 400
+
+.exec-info
+  +clearfix
+  +leader(1)
+
+.head-shot
+  background: $brand-grey
+  float: left
+  margin-right: $base-line-height
+  +square(150px)
+  +border-radius(50%)
+
+  &.jim
+    background: image-url('headshots/jim-small.jpg')
+
+  &.ani
+    background: image-url('headshots/ani-small.jpg')
+
+  &.pankaj
+    background: image-url('headshots/pankaj-small.jpg')
+
+  &.scott
+    background: image-url('headshots/scott-small.jpg')
+
+  &.ken
+    background: image-url('headshots/ken-small.jpg')

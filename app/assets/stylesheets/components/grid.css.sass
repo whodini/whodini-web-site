@@ -23,7 +23,7 @@ $desktop: 55em 12
     // background: red
     .col-3
       +span-columns(3)
-      &:last-child
+      &:nth-child(3n)
         +omega
 
     .left, .right
@@ -38,7 +38,7 @@ $desktop: 55em 12
     // +susy-grid-background
     .col-3
       +span-columns(4)
-      &:last-child
+      &:nth-child(3n)
         +span-columns(4 omega)
 
     .left, .right
