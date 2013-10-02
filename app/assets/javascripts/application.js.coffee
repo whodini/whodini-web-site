@@ -4,6 +4,7 @@ require [
     'jquery-spin'
     'welcome'
     'ghosttype'
+    'waypoints'
 ], ($, ConfigManager) ->
 
   # Start up the app once the DOM is ready
@@ -13,6 +14,10 @@ require [
     whodini =
         initialize: ->
             console.log 'init Whodini'
+
+            # $(".thing").waypoint (direction) ->
+            #   alert "Top of thing hit top of viewport."
+
 
             $('.close').click( (event) ->
               event.preventDefault()
