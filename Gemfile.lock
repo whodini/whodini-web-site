@@ -10,8 +10,14 @@ GIT
       rails (>= 3.2.0)
 
 GIT
-  remote: https://b9baf1fb4e6db4643c1bf43ca9e0fb64a51cb4ff:x-oauth-basic@github.com/whodini/whodini-web-common.git
-  revision: c2d9b03e8818ab5c18ce21901925ba0d76e8650a
+  remote: https://github.com/jwhitley/requirejs-rails.git
+  revision: f2330104aeca4d193fd5680a22ae7eee85d814b5
+  specs:
+    requirejs-rails (0.9.1)
+      railties (>= 3.1.1, < 4.1)
+
+PATH
+  remote: /Users/timtowles/Projects/whodini-web-common
   specs:
     whodini_main (0.1.3)
       compass-h5bp
@@ -20,13 +26,6 @@ GIT
       modular-scale
       rails (~> 3.2.13)
       susy
-
-GIT
-  remote: https://github.com/jwhitley/requirejs-rails.git
-  revision: f2330104aeca4d193fd5680a22ae7eee85d814b5
-  specs:
-    requirejs-rails (0.9.1)
-      railties (>= 3.1.1, < 4.1)
 
 GEM
   remote: https://rubygems.org/
