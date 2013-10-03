@@ -20,12 +20,9 @@ gem 'requirejs-rails', '0.9.1', :git => 'https://github.com/jwhitley/requirejs-r
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass', '3.3.0.alpha.149'
-  gem 'compass', '0.12.2'
-  gem 'compass-sourcemaps', "~> 0.12.2.sourcemaps.57a186c"
-  # gem 'sass-rails'
-  gem 'coffee-rails'
-  # gem 'compass-rails'
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+  gem 'compass-rails'
   gem 'compass-recipes'
   gem 'modular-scale'
   gem 'susy' #robust grid system: http://susy.oddbird.net/#susy-oddbird-net
