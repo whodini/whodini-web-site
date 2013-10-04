@@ -7,6 +7,12 @@ require [
   $ ->
     console.log 'js for all pages'
 
+    $header = $("#header")
+    $clone = $header.before($header.clone().addClass("clone"))
+    $(window).on "scroll", ->
+      top = $(document).scrollTop()
+      $('body').toggleClass "down", (top > 400)
+
     $('.close').click (event) ->
       event.preventDefault()
       $(event.target).parent().hide('fast')

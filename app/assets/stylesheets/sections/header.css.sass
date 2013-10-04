@@ -3,6 +3,12 @@
   border-bottom: 1px solid lighten($brand-grey, 85%)
   +clearfix
 
+  &.clone
+    position: fixed
+    top: -60px
+    +opacity(.95)
+    +transition(all .2s ease-in-out)
+
   .centered-container
     overflow: visible
     position: relative
@@ -16,3 +22,8 @@
   .whodini-logo
     display: inline-block
     float: left
+
+body.down
+  #header.clone
+    top: 0
+    z-index: 999
