@@ -5,10 +5,6 @@ body.about
     +leader(0)
     font-weight: 400
 
-.exec-info
-  +clearfix
-  +leader(1)
-
 .head-shot
   background: $brand-grey
   margin: 0 auto
@@ -33,29 +29,22 @@ body.about
   &.ken
     background: image-url('headshots/ken-small.jpg')
 
-.advisors
-  .head-shot
-    float: left
-    margin-right: 10px
-
 .slider
   margin: $base-line-height auto
   max-width: 760px
   height: 320px
   position: relative
-  // overflow: hidden
-  // border: 1px solid red
   +clearfix
 
-.slider li
-  position: absolute
-  top: 0
-  left: 0
-  +opacity(0)
-  +transition(opacity .2s ease-in-out)
+  li
+    position: absolute
+    top: 0
+    left: 0
+    +opacity(0)
+    +transition(opacity .2s ease-in-out)
 
-  &.active
-    +opacity(1)
+    &.active
+      +opacity(1)
 
 ul.executiveTeam
   text-align: center
@@ -68,6 +57,7 @@ ul.executiveTeam
     margin-top: 6px
 
   em
+    display: block
     color: lighten($brand-grey, 50%)
 
   a
@@ -88,9 +78,6 @@ ul.executiveTeam
         bottom: -28px
         +arrow(40px, 20px, up, lighten($brand-grey, 85%))
 
-
-    em
-      display: block
 
   .active, a:hover
     .head-shot
