@@ -1,9 +1,6 @@
-/ section.primary
-/   .centered-container
-/     hgroup
-/       h1 Company
-/       p
-/         | Whodini is an enterprise software company founded in 2010 and based in Los Altos, CA, in the heart of Silicon Valley.  We are creating a technologically groundbreaking product to help coworkers in large companies find the right person, right away, to get their business done.
+- content_for :javascript do
+  javascript:
+    require(['company']);
 
 section
   .centered-container
@@ -11,7 +8,7 @@ section
       hgroup
         h1 Management Team
 
-      ul.executiveTeam
+      ul#executiveTeam
         li.active
           a href="#jim"
             .head-shot.jim
@@ -35,7 +32,7 @@ section
 
 section.bios
   .centered-container
-      ul.slider
+      ul#executiveSlider.slider
         li#jim
           h4 Jim is responsible for overall company strategy and execution.
 
@@ -70,7 +67,7 @@ section
       hgroup
         h1 Advisors
 
-      ul.executiveTeam
+      ul#advisors
         li.active
           a href="#jasbir"
             .head-shot.jasbir
@@ -85,7 +82,7 @@ section
 
 section.bios
   .centered-container
-      ul.slider
+      ul#advisorsSlider.slider
         li#jasbir
           h4 Jasbir brings a deep understanding of technology as it relates to system and application management, security and identity management, data mining, data science and analytics.
           p With a proven track record in founding several IT-related companies, Jasbir holds multiple patents in security and identity management technology. Jasbir’s products have served several global customers like Sun, Boeing, Novartis, IBM, UBS, Allergen, Saudi Aramco, BMW and Syngenta.

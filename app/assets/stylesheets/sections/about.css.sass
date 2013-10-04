@@ -1,10 +1,3 @@
-body.about
-  h2
-    +trailer(0)
-  h4
-    +leader(0)
-    font-weight: 400
-
 .head-shot
   background: $brand-grey
   margin: 0 auto
@@ -12,53 +5,39 @@ body.about
   +border-radius(50%)
 
   &.jim
-    background: image-url('headshots/jim-small.jpg')
+    +sprites-sprite(jim)
 
   &.ani
-    background: image-url('headshots/ani-small.jpg')
+    +sprites-sprite(ani)
 
   &.pankaj
-    background: image-url('headshots/pankaj-small.jpg')
+    +sprites-sprite(pankaj)
 
   &.scott
-    background: image-url('headshots/scott-small.jpg')
+    +sprites-sprite(scott)
 
   &.jasbir
-    // background: image-url('headshots/jasbir-small.jpg')
+    +sprites-sprite(jasbir)
 
   &.ken
-    background: image-url('headshots/ken-small.jpg')
+    +sprites-sprite(ken)
 
-.slider
-  margin: $base-line-height auto
-  max-width: 760px
-  height: 320px
-  position: relative
-  +clearfix
+.bios
+  background: lighten($brand-grey, 83%)
 
-  li
-    position: absolute
-    top: 0
-    left: 0
-    +opacity(0)
-    +transition(opacity .2s ease-in-out)
-
-    &.active
-      +opacity(1)
-
-ul.executiveTeam
+ul#executiveTeam, ul#advisors
   text-align: center
   margin: 0
   padding: 0
   text-align: center
   +clearfix
 
-  h4
-    margin-top: 6px
+  h3
+    color: lighten($brand-grey, 25%)
 
   em
     display: block
-    color: lighten($brand-grey, 50%)
+    color: lighten($brand-grey, 25%)
 
   a
     text-decoration: none
@@ -70,34 +49,33 @@ ul.executiveTeam
     position: relative
     padding: 0 $base-line-height
 
-    &.active
-      &:after
-        position: absolute
-        content: ' '
-        margin-left: -20px
-        bottom: -28px
-        +arrow(40px, 20px, up, lighten($brand-grey, 85%))
-
-
   .active, a:hover
+
+    &:after
+      position: absolute
+      content: ' '
+      margin-left: -20px
+      bottom: -28px
+      +arrow(40px, 20px, up, lighten($brand-grey, 85%))
+
+    h3
+      color: mix($brand-green-dk, $brand-green-lt, 50%)
+
     .head-shot
       &.jim
-        background: image-url('headshots/jim-small-active.jpg')
+        +sprites-sprite(jim-active)
 
       &.ani
-        background: image-url('headshots/ani-small-active.jpg')
+        +sprites-sprite(ani-active)
 
       &.pankaj
-        background: image-url('headshots/pankaj-small-active.jpg')
+        +sprites-sprite(pankaj-active)
 
       &.scott
-        background: image-url('headshots/scott-small-active.jpg')
+        +sprites-sprite(scott-active)
 
       &.jasbir
-        // background: image-url('headshots/jasbir-small-active.jpg')
+        +sprites-sprite(jasbir-active)
 
       &.ken
-        background: image-url('headshots/ken-small-active.jpg')
-
-.bios
-  background: lighten($brand-grey, 85%)
+        +sprites-sprite(ken-active)

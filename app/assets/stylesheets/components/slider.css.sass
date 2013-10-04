@@ -1,0 +1,16 @@
+.slider
+  margin: $base-line-height auto
+  max-width: 760px
+  height: 345px
+  position: relative
+  +clearfix
+
+  li
+    position: absolute
+    top: 0
+    left: 0
+    +opacity(0)
+    +transition(opacity .2s ease-in-out)
+
+    &.active
+      +opacity(1)

@@ -1,3 +1,24 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+require [
+    'jquery'
+    'underscore'
+], ($, _) ->
+
+  $ ->
+    console.log 'Init company js'
+    console.log "Function : initSliders"
+
+    $sliders = $(".slider")
+    $.each $sliders, ( i, v ) ->
+      $(v).find('li').first().addClass("active").show()
+
+    $('#executiveTeam a').click (event) ->
+      event.preventDefault()
+      $('#executiveTeam li, #executiveSlider li').removeClass('active')
+      $($(event.target).closest('a').attr('href')).addClass('active')
+      $(event.target).closest('li').addClass('active')
+
+    $('#advisors a').click (event) ->
+      event.preventDefault()
+      $('#advisors li, #advisorsSlider li').removeClass('active')
+      $($(event.target).closest('a').attr('href')).addClass('active')
+      $(event.target).closest('li').addClass('active')
