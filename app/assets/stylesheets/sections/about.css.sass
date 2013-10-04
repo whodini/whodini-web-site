@@ -11,8 +11,7 @@ body.about
 
 .head-shot
   background: $brand-grey
-  float: left
-  margin-right: $base-line-height
+  margin: 0 auto
   +square(150px)
   +border-radius(50%)
 
@@ -28,5 +27,90 @@ body.about
   &.scott
     background: image-url('headshots/scott-small.jpg')
 
+  &.jasbir
+    // background: image-url('headshots/jasbir-small.jpg')
+
   &.ken
     background: image-url('headshots/ken-small.jpg')
+
+.advisors
+  .head-shot
+    float: left
+    margin-right: 10px
+
+.slider
+  margin: $base-line-height auto
+  max-width: 760px
+  height: 320px
+  position: relative
+  // overflow: hidden
+  // border: 1px solid red
+  +clearfix
+
+.slider li
+  position: absolute
+  top: 0
+  left: 0
+  +opacity(0)
+  +transition(opacity .2s ease-in-out)
+
+  &.active
+    +opacity(1)
+
+ul.executiveTeam
+  text-align: center
+  margin: 0
+  padding: 0
+  text-align: center
+  +clearfix
+
+  h4
+    margin-top: 6px
+
+  em
+    color: lighten($brand-grey, 50%)
+
+  a
+    text-decoration: none
+
+  li
+    display: inline-block
+    float left
+    margin-bottom: $base-line-height
+    position: relative
+    padding: 0 $base-line-height
+
+    &.active
+      &:after
+        position: absolute
+        content: ' '
+        margin-left: -20px
+        bottom: -28px
+        +arrow(40px, 20px, up, lighten($brand-grey, 85%))
+
+
+    em
+      display: block
+
+  .active, a:hover
+    .head-shot
+      &.jim
+        background: image-url('headshots/jim-small-active.jpg')
+
+      &.ani
+        background: image-url('headshots/ani-small-active.jpg')
+
+      &.pankaj
+        background: image-url('headshots/pankaj-small-active.jpg')
+
+      &.scott
+        background: image-url('headshots/scott-small-active.jpg')
+
+      &.jasbir
+        // background: image-url('headshots/jasbir-small-active.jpg')
+
+      &.ken
+        background: image-url('headshots/ken-small-active.jpg')
+
+.bios
+  background: lighten($brand-grey, 85%)

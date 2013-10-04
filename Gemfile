@@ -7,11 +7,11 @@ gem 'rails', '3.2.14'
 
 gem 'sqlite3'
 
-gem 'whodini_main', git: "https://b9baf1fb4e6db4643c1bf43ca9e0fb64a51cb4ff:x-oauth-basic@github.com/whodini/whodini-web-common.git"
+# gem 'whodini_main', git: "https://b9baf1fb4e6db4643c1bf43ca9e0fb64a51cb4ff:x-oauth-basic@github.com/whodini/whodini-web-common.git"
 # for local development:
 
 # for local development:
-# gem 'whodini_main', path: "/Users/timtowles/Projects/whodini-web-common"
+gem 'whodini_main', path: "/Users/timtowles/Projects/whodini-web-common"
 
 # Needs to be outside of assets group because it’s needed in production
 # Use a patched version with an updated r.js file
@@ -20,9 +20,9 @@ gem 'requirejs-rails', '0.9.1', :git => 'https://github.com/jwhitley/requirejs-r
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails'
   gem 'compass-rails'
+  gem 'coffee-rails'
   gem 'compass-recipes'
   gem 'modular-scale'
   gem 'susy' #robust grid system: http://susy.oddbird.net/#susy-oddbird-net
