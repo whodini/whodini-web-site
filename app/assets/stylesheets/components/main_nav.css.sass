@@ -18,11 +18,22 @@ ul.main-nav
       padding: $base-line-height/1.5
       text-transform: uppercase
       text-decoration: none
+      +transition(all .2s ease-in-out)
       color: lighten($brand-grey, 45%)
 
     &.current a, a:hover
       color: black
       background: lighten($brand-grey, 86%)
+
+  .nav-primary
+    a
+      color: white
+      background: $brand-green-lt
+      padding: $base-line-height/1.5  $base-line-height
+      &:hover
+        color: white
+        background: darken($brand-green-lt, 7%)
+
 
 // toggle control that shows up only on phones
 #nav-toggle
