@@ -1,9 +1,9 @@
 .about
   .primary
-    p:first-child
-      +leader(3)
-    p:last-child
-      +trailer(1)
+    // p:first-child
+    //   +leader(3)
+    // p:last-child
+    //   +trailer(1)
 
 
 .head-shot
@@ -57,14 +57,15 @@ ul#executiveTeam, ul#advisors
     position: relative
     padding: 0 $base-line-height
 
-  .active, a:hover
-
+  .active
     &:after
       position: absolute
       content: ' '
       margin-left: -20px
       bottom: -28px
       +arrow(40px, 20px, up, lighten($brand-grey, 85%))
+
+  .active, a:hover
 
     h3
       color: mix($brand-green-dk, $brand-green-lt, 50%)

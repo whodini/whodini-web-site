@@ -5,6 +5,7 @@ paths:
   spin: 'plugins/jquery/spin'
   ghosttype: 'plugins/jquery/jquery.ghosttype-1.2'
   waypoints: 'plugins/jquery/waypoints'
+  waypoints-sticky: 'plugins/jquery/waypoints-sticky'
 
 shim:
   'jquery':
@@ -16,4 +17,6 @@ shim:
   'ghosttype':
     deps: ['jquery']
   'waypoints':
+    deps: ['jquery']
+  'waypoints-sticky':
     deps: ['jquery']
