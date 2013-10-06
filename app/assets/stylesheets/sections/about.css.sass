@@ -88,3 +88,16 @@ ul#executiveTeam, ul#advisors
 
       &.ken
         +sprites-sprite(ken-active)
+
+  .linkedin
+    display: inline-block
+    text-indent: -999px
+    overflow: hidden
+    margin: 0 0 -2px 7px
+    background-color: $brand-grey
+    +opacity(.5)
+    +sprites-sprite(linkedin-desat)
+    +square(16px)
+    &:hover
+      +opacity(1)
+      +sprites-sprite(linkedin)
