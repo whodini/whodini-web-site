@@ -4,6 +4,7 @@
   +clearfix
 
   &.clone
+    display: none
     position: fixed
     top: -65px
     +opacity(.95)
@@ -19,6 +20,8 @@
     text-align: center
 
 +at-breakpoint($tablet)
+  #header.clone
+    display: block
   .whodini-logo
     display: inline-block
     float: left
