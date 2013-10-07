@@ -44,62 +44,85 @@ ul#scoreTags
     padding: 12px
     width: 80px
     font-weight: 400
-    +adjust-font-size-to(32px)
+    +adjust-font-size-to(36px)
     +opacity(0)
 
     b
-      margin: 0 0 10px -4px
+      margin: 0 0 13px -4px
+
+  .outline
+    position: absolute
+    border: 2px solid mix($brand-orange, $brand-yellow, 55%)
+  $connector-height: 50px
+
+  .line
+    @extend .outline
+    border-left: none
+    border-top: none
+    border-bottom: none
+    height: $connector-height
+    left: 50%
+    bottom: -30px
+
+  .circle
+    @extend .outline
+    left: 50%
+    bottom: -120px
+    margin-left: -45px
+    +square(90px)
+    +border-radius(50%)
 
   &.one
     li
       &:nth-child(1)
-        top: 107px
+        top: 65px
         left: 121px
-        +transition(all .2s ease-in-out)
+        +transition(all .1s ease-in)
       &:nth-child(2)
-        top: 85px
-        left: 267px
-        +transition(all .2s  .1s ease-in-out)
+        top: 45px
+        left: 257px
+        +transition(all .1s  .1s ease-in)
         +scale(1.2)
       &:nth-child(3)
-        top: 41px
+        top: 20px
         left: 403px
-        +transition(all .2s .2s ease-in-out )
+        +scale(1.1)
+        +transition(all .1s .2s ease-in )
       &:nth-child(4)
-        top: 24px
-        left: 484px
-        +transition(all .2s .3s ease-in-out)
+        top: -10px
+        left: 474px
+        +transition(all .1s .3s ease-in)
         +scale(1.3)
 
   &.two
     li
       &:nth-child(1)
-        top: 60px
-        left: 210px
+        top: 15px
+        left: 200px
         +scale(1.2)
-        +transition(all .2s ease-in-out)
+        +transition(all .1s ease-in)
       &:nth-child(2)
-        top: 28px
+        top: -10px
         left: 402px
-        +transition(all .2s  .1s ease-in-out)
+        +transition(all .1s  .1s ease-in)
         +scale(1.4)
 
   &.three
     li
       &:nth-child(1)
-        top: 107px
-        left: 121px
-        +transition(all .2s ease-in-out)
+        top: 60px
+        left: 120px
+        +transition(all .1s ease-in)
       &:nth-child(2)
-        top: 85px
-        left: 267px
-        +transition(all .2s  .1s ease-in-out)
+        top: 45px
+        left: 257px
         +scale(1.2)
+        +transition(all .1s  .1s ease-in)
       &:nth-child(3)
-        top: 41px
+        top: 0px
         left: 403px
         +scale(1.3)
-        +transition(all .2s .2s ease-in-out )
+        +transition(all .1s .2s ease-in)
 
 // TODO: refactor the specificity here to dry out
 ul#scoreTags
@@ -109,18 +132,28 @@ ul#scoreTags
         +opacity(1)
 
         &:nth-child(1)
-          top: 98px
+          top: 55px
 
         &:nth-child(2)
-          top: 75px
+          top: 35px
 
         &:nth-child(3)
-          top: 31px
+          top: 10px
 
         &:nth-child(4)
-          top: 14px
+          top: -20px
 
     &.two
+      li
+        +opacity(1)
+
+        &:nth-child(1)
+          top: 5px
+
+        &:nth-child(2)
+          top: -20px
+
+    &.three
       li
         +opacity(1)
 
@@ -128,18 +161,8 @@ ul#scoreTags
           top: 50px
 
         &:nth-child(2)
-          top: 18px
-
-    &.three
-      li
-        +opacity(1)
-
-        &:nth-child(1)
-          top: 98px
-
-        &:nth-child(2)
-          top: 75px
+          top: 35px
 
         &:nth-child(3)
-          top: 31px
+          top: -10px
 
