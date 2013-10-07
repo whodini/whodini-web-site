@@ -10,6 +10,7 @@
     // -o-background-size: cover
     // background-size: cover
     position: relative
+    height: 530px
 
     header
       +prefix(0)
@@ -28,13 +29,17 @@
   font-size: 24px
   font-weight: 300!important
   text-align: left
-  // background:  rgba(lighten($brand-grey, 80%), .8)
-  // border: none
-  // color: black
+  background: lighten($brand-orange, 45%) image-url('search.png') no-repeat 305px center
+  border: 1px solid mix($brand-orange, $brand-yellow, 55%)
+  // position: absolute
+  // top: $base-line-height
+  // right: 0
   +trailer(2)
+
   &:focus
     border-color: none
     outline: 0
+
 
 ul#scoreTags
   position: absolute
@@ -45,46 +50,56 @@ ul#scoreTags
   li
     position: absolute
     display: inline-block
-    background: $brand-green-lt
+    color: mix($brand-orange, $brand-yellow, 55%)
     padding: 12px
+    width: 80px
+    font-weight: 400
+    +adjust-font-size-to(32px)
     +opacity(0)
 
-    &:after
-      content: ' '
-      position: absolute
-      bottom: -7px
-      left: 50%
-      margin-left: -5px
-      +arrow(10px, 7px, down, $brand-green-lt)
+    b
+      margin: 0 0 10px -4px
+
+    // &:after
+    //   content: ' '
+    //   position: absolute
+    //   bottom: -7px
+    //   left: 50%
+    //   margin-left: -5px
+    //   +arrow(10px, 7px, down, $brand-green-lt)
 
     &.active
       +opacity(1)
 
       &:nth-child(1)
-        top: 79px
+        top: 326px
 
       &:nth-child(2)
-        top: 110px
+        top: 322px
 
       &:nth-child(3)
-        top: 60px
+        top: 290px
 
       &:nth-child(4)
-        top: 45px
+        top: 325px
 
     &:nth-child(1)
-      top: 89px
-      left: 210px
+      top: 316px
+      left: 114px
       +transition(all .2s ease-in-out)
+
     &:nth-child(2)
-      top: 120px
+      top: 312px
       left: 287px
       +transition(all .2s  .1s ease-in-out)
+      +scale(1.2)
+
     &:nth-child(3)
-      top: 70px
+      top: 280px
       left: 460px
       +transition(all .2s .2s ease-in-out )
     &:nth-child(4)
-      top: 55px
+      top: 315px
       left: 543px
       +transition(all .2s .3s ease-in-out)
+      +scale(1.3)
