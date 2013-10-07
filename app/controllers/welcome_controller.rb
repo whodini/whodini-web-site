@@ -16,4 +16,7 @@ class WelcomeController < ApplicationController
     redirect_to new_url
   end
 
+  def faq
+  end
+
 end

@@ -15,6 +15,16 @@
     h1
       +leader(1)
 
+  small
+    float: right
+    background: rgba(darken($brand-green-dk, 30%), .7)
+    padding: 0 10px
+    +adjust-font-size-to(14px)
+    a
+      color: rgba(white, .7)
+      &:hover
+        color: white
+
 #searchField
   display: inline-block
   padding: 12px
@@ -81,17 +91,17 @@ ul#scoreTags
       &:nth-child(2)
         top: 45px
         left: 257px
-        +transition(all .1s  ease-in)
+        +transition(all .1s ease-in)
         +scale(1.2)
       &:nth-child(3)
         top: 20px
         left: 403px
         +scale(1.1)
-        +transition(all .1s  ease-in )
+        +transition(all .1s ease-in )
       &:nth-child(4)
         top: -10px
         left: 474px
-        +transition(all .1s  ease-in)
+        +transition(all .1s ease-in)
         +scale(1.3)
 
   &.two
