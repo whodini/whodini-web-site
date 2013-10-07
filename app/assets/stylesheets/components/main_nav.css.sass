@@ -5,8 +5,8 @@ ul.main-nav
   +inline-list
 
   &.product-nav
-    display: block
-    width: 100%
+    display: inline
+    width: auto
 
   li
     position: relative
@@ -26,6 +26,7 @@ ul.main-nav
       background: lighten($brand-grey, 86%)
 
   .nav-primary
+    margin-right: $base-line-height/1.5
     a
       color: white
       background: $brand-green-lt
@@ -73,9 +74,7 @@ ul.main-nav.site-nav
       +adjust-font-size-to(14px)
       a
         padding: $base-line-height/1.5 $base-line-height/2
-    &.product-nav
-      display: inline
-      width: auto
+
 
   ul.main-nav.site-nav
     position: static
@@ -88,6 +87,8 @@ ul.main-nav.site-nav
   #nav-toggle
     display: none
 
+  .nav-primary
+    margin-right: 0
 // Desktop Breakpoint (12 columns default)
 // --------------------------------------------------------------------
 +at-breakpoint($desktop)
