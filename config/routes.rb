@@ -14,6 +14,7 @@ WhodiniWebSite::Application.routes.draw do
 
   match 'terms' => 'welcome#terms', :as => '/terms'
   match 'privacy' => 'welcome#privacy', :as => '/privacy'
+  match 'faq' => 'welcome#faq', :as => '/faq'
 
   # redirect_to_whodini_app
   post "/redirect_to_whodini_app"=> "welcome#redirect_to_whodini_app"
