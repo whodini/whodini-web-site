@@ -17,20 +17,17 @@ section
         p Contact Sales to start the conversation about how Whodini can help your business.
 
         p
-          |Phone:
-          = link_to " 650.618.5677 ", "tel:+16506185677"
-          | Email:
-          = link_to " sales@whodini.com", 'mailto:sales@whodini.com'
+          |Phone:&nbsp;
+          = link_to "650.618.5677", "tel:+16506185677"
+          br
+          |Email:&nbsp;
+          = link_to "sales@whodini.com", 'mailto:sales@whodini.com'
 
       .right
         = form_for @message, :url => contact_path do |f|
           fieldset.fields
-              .left
-                = f.label :first_name
-                = f.text_field :first_name
-              .right
-                = f.label :last_name
-                = f.text_field :last_name
+              = f.label :name
+              = f.text_field :name
               = f.label :email
               = f.text_field :email
               = f.label :body, 'Message'
