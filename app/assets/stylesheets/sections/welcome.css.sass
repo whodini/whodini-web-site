@@ -3,7 +3,6 @@
     background: url(office.jpg) no-repeat center 0
     position: relative
     overflow: hidden
-    height: 530px
 
     header
       +prefix(0)
@@ -13,12 +12,13 @@
       text-align: left
 
     h1
-      +leader(1)
+      +leader(.5)
 
   .col-3
     img
       display: block
       margin: $base-line-height*2 auto 0 auto
+      +opacity(.5)
     h2
       text-align: center
       +leader(0)
@@ -32,7 +32,7 @@
   text-align: left
   background: lighten($brand-orange, 45%) image-url('search.png') no-repeat 305px center
   border: 1px solid lighten(mix($brand-orange, $brand-yellow, 55%), 10%)
-  +trailer(2)
+  +trailer(1)
 
   &:focus
     border-color: none
