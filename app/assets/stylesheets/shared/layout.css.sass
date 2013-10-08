@@ -16,10 +16,11 @@ hgroup
 // Secondary Header
 // --------------------------------------------------------------------
 .secondary
-  background-color:  lighten($brand-grey, 88%)
+  background-color:  lighten($brand-grey, 85%)
   padding: $base-line-height*2 0
   header
     hgroup
+      text-align: left
       p
         +adjust-font-size-to(16px)
       p:last-child
@@ -37,10 +38,14 @@ hgroup
 section.staggered
   padding-top: $base-line-height*2
 
+
   .content, figure
     min-height: 200px
     margin: 0
     +span-columns(12 omega)
+
+  .content
+    margin-bottom: $base-line-height
 
 section.staggered:nth-child(even)
   background: lighten($brand-grey, 88%)
@@ -67,7 +72,7 @@ section.articles
     h1
       +leader(1.5)
     p:last-child
-      +trailer(5)
+      +trailer(3)
 
   section.staggered
     .content
@@ -80,8 +85,11 @@ section.articles
     .content
       +span-columns(5)
     figure
-      text-align: right
       +span-columns(4 omega)
+      position: absolute
+      right: 0
+      bottom: 0
+      margin-right: 2em
 
   section.articles
     article
