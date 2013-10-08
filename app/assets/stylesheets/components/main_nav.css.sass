@@ -21,17 +21,25 @@ ul.main-nav
       +transition(all .2s ease-in-out)
       color: lighten($brand-grey, 45%)
 
-    &.current a, a:hover
+    a:hover
       color: black
       background: lighten($brand-grey, 86%)
 
+    &.current
+      margin-bottom: -1px
+      a
+        color: black
+        background: lighten($brand-grey, 86%)
+
   .nav-primary
-    margin-right: $base-line-height/1.5
-    margin-bottom: -1px // overlap the bottom border of the header
+    margin: 5.5px $base-line-height/1.5 5px 5.5px
     a
       color: white
       background: $brand-green-lt
-      padding: ($base-line-height/1.5)+1  $base-line-height
+      padding: $base-line-height/2  $base-line-height
+      +border-radius(3px)
+      // margin-top: $base-line-height/.5
+      // margin-bottom: $base-line-height/.5
       &:hover
         color: white
         background: darken($brand-green-lt, 7%)
