@@ -1,13 +1,10 @@
-
 $total-columns: 12
 $column-width: 3.5em
 $gutter-width: 2em
 $grid-padding: $gutter-width
 $break: 12
-
 $tablet: 9
 $desktop: 55em 12
-
 
 .centered-container
   position: relative
@@ -19,6 +16,10 @@ $desktop: 55em 12
   .col-3, .left, .right
     +span-columns(12)
 
+  .left
+    .clouds
+      margin-top: 110px
+
 +at-breakpoint($tablet)
   .centered-container
     // +susy-grid-background
@@ -28,11 +29,12 @@ $desktop: 55em 12
       &:nth-child(3n)
         +omega
 
-    .left, .right
-      +span-columns(5)
+    .left
+      +span-columns(4)
 
     .right
-      +span-columns(4)
+      text-align: left
+      +span-columns(5)
       +omega
 
 +at-breakpoint($desktop)
@@ -44,8 +46,9 @@ $desktop: 55em 12
       &:nth-child(3n)
         +span-columns(4 omega)
 
-    .left, .right
-      +span-columns(6)
+    .left
+      +span-columns(5)
 
     .right
+      +span-columns(7)
       +omega

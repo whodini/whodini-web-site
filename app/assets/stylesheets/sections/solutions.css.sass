@@ -2,7 +2,16 @@
   .primary
     color: white
     min-height: 375px
-    background: linear-gradient($brand-green-lt, lighten($brand-green-lt, 15%))
+    +background(image-url("solutions-header.png"), linear-gradient($brand-green-lt, lighten($brand-green-lt, 15%)))
+    background-repeat: no-repeat
+    background-position: center center
+    // -webkit-background-size: cover
+    // -moz-background-size: cover
+    // -o-background-size: cover
+    // background-size: cover
+
+    h1, p
+      +text-shadow($brand-green-lt 0 0 20px)
 
     h1
       color: lighten($brand-green-lt, 40%)
