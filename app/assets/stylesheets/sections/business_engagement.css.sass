@@ -2,13 +2,23 @@
   .primary
     color: white
     background: linear-gradient(darken(mix($brand-blue, $brand-orange, 60%), 10%), darken(mix($brand-blue, $brand-orange, 80%), 10%))
+    small
+      background: transparent
+      position: absolute
+      right: 2em
+      bottom: 0
 
+  hgroup
+    text-align: left
+    h1
+      +leader(1)
+      +trailer(1)
 
-  // hgroup
-  //   text-align: left
-  //   h1
-  //     +leader(1)
-  //     +trailer(1)
-  //   img
-  //     float: left
-  //     margin-right: 60px
+.pattern-graphic
+  position: absolute
+
+.engagement-white
+  @extend .pattern-graphic
+  width: 111px
+  height: 81px
+  +sprites-sprite(engagement-white)
