@@ -1,7 +1,8 @@
 .businessEngagement
   .primary
     color: white
-    background: linear-gradient(darken(mix($brand-blue, $brand-orange, 60%), 15%), darken(mix($brand-blue, $brand-orange, 80%), 10%))
+    min-height: 375px
+    background: linear-gradient($brand-blue, darken(mix($brand-blue, $brand-orange, 80%), 10%))
     small
       background: transparent
       position: absolute
@@ -11,8 +12,18 @@
   hgroup
     text-align: left
     h1
-      +leader(1)
-      +trailer(1)
+      +leader(1.4)
+      +trailer(1.4)
+
+  ul.main-nav
+    .nav-primary
+      a
+        background: darken($brand-blue, 5%)
+        &:hover
+          background: darken($brand-blue, 10%)
+
+  h2, h3
+    color: $brand-blue
 
 .pattern-graphic
   position: absolute

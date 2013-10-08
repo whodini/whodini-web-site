@@ -27,10 +27,11 @@ ul.main-nav
 
   .nav-primary
     margin-right: $base-line-height/1.5
+    margin-bottom: -1px // overlap the bottom border of the header
     a
       color: white
       background: $brand-green-lt
-      padding: $base-line-height/1.5  $base-line-height
+      padding: ($base-line-height/1.5)+1  $base-line-height
       &:hover
         color: white
         background: darken($brand-green-lt, 7%)

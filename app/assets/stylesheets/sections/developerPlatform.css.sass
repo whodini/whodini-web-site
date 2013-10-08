@@ -1,0 +1,24 @@
+.developerPlatform
+  .primary
+    color: white
+    min-height: 375px
+    background: linear-gradient($brand-orange, lighten(mix($brand-yellow,$brand-orange,50%), 5%))
+
+    h1
+      color: lighten($brand-orange, 35%)
+      +leader(1.4)
+      strong
+        color: white
+
+    p
+      color: lighten($brand-orange, 35%)
+
+  ul.main-nav
+    .nav-primary
+      a
+        background: darken($brand-orange, 5%)
+        &:hover
+          background: darken($brand-orange, 10%)
+
+  h2, h3
+    color: $brand-orange

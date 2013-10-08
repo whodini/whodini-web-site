@@ -1,11 +1,27 @@
 .solutions
   .primary
-    // color: white
-    // background: linear-gradient(lighten($brand-grey, 65%), darken($brand-grey, 55%))
+    color: white
+    min-height: 375px
+    background: linear-gradient($brand-green-lt, lighten($brand-green-lt, 15%))
 
     h1
+      color: lighten($brand-green-lt, 40%)
       +leader(1)
+      strong
+        color: white
 
+    p
+      color: lighten($brand-green-lt, 40%)
+
+  ul.main-nav
+    .nav-primary
+      a
+        background: darken($brand-green-lt, 5%)
+        &:hover
+          background: darken($brand-green-lt, 10%)
+
+  // h2, h3
+  //   color: $brand-orange
 // .solutions-white
 //   @extend .pattern-graphic
 //   width: 211px
