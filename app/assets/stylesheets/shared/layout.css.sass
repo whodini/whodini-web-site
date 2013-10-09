@@ -18,9 +18,10 @@ hgroup
 .secondary
   background-color:  lighten($brand-grey, 85%)
   padding: $base-line-height*2 0
+  text-align: center
   header
     hgroup
-      text-align: left
+
       p
         +adjust-font-size-to(16px)
       p:last-child
@@ -37,7 +38,6 @@ hgroup
 // --------------------------------------------------------------------
 section.staggered
   padding-top: $base-line-height*2
-
 
   .content, figure
     min-height: 200px
@@ -86,6 +86,7 @@ section.articles
       +span-columns(5)
     figure
       +span-columns(4 omega)
+      text-align: right
       position: absolute
       right: 0
       bottom: 0
