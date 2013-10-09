@@ -2,12 +2,17 @@
   .primary
     color: white
     min-height: 375px
-    background: linear-gradient($brand-blue, darken(mix($brand-blue, $brand-orange, 80%), 10%))
+    +background(image-url("numbers.png"), linear-gradient($brand-blue, darken(mix($brand-blue, $brand-orange, 80%), 10%)))
+    background-repeat: no-repeat
+    background-position: center center
     small
       background: transparent
       position: absolute
       right: 2em
       bottom: 0
+
+    h1, p
+      +text-shadow($brand-blue 0 0 20px)
 
   hgroup
     h1
