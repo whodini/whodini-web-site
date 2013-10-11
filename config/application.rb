@@ -16,8 +16,8 @@ module WhodiniWebSite
       :address              => "smtp.gmail.com",
       :port                 => 587,
       :domain               => "whodini.com",
-      :user_name            => "tim@whodini.com",
-      :password             => "tt729ror",
+      :user_name            => "info@whodini.com",
+      # :password             => "tt729ror",
       :authentication       => :plain,
       :enable_starttls_auto => true
     }

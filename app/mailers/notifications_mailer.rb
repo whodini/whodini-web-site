@@ -1,7 +1,7 @@
 class NotificationsMailer < ActionMailer::Base
 
   default :from => "noreply@whodini.com"
-  default :to => "tim@whodini.com"
+  default :to => "info@whodini.com"
 
   def new_message(message)
     @message = message

@@ -16,8 +16,8 @@ require [
       else
         $('.site-nav').toggle()
 
-    $header = $("#header")
-    $clone = $header.before($header.clone().addClass("clone"))
+    $header = $(".header")
+    $('body').append($header.clone().addClass("clone"))
     $(window).on "scroll", ->
       top = $(document).scrollTop()
       $('body').toggleClass "down", (top > 300)

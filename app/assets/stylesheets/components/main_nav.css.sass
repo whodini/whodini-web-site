@@ -33,6 +33,7 @@ ul.main-nav
 
   .nav-primary
     margin: 5px $base-line-height/1.5 5px 5px
+    display: none
     a
       color: white
       background: $brand-green-lt
@@ -43,6 +44,12 @@ ul.main-nav
       &:hover
         color: white
         background: darken($brand-green-lt, 7%)
+
+    &.phone
+      display: inline-block
+      a
+        padding-left: 10px
+        padding-right: 10px
 
 
 // toggle control that shows up only on phones
@@ -85,7 +92,6 @@ ul.main-nav.site-nav
       a
         padding: $base-line-height/1.5 $base-line-height/2
 
-
   ul.main-nav.site-nav
     position: static
     display: block!important
@@ -98,8 +104,15 @@ ul.main-nav.site-nav
   #nav-toggle
     display: none
 
-  .nav-primary
-    margin-right: 0
+  ul.main-nav
+    li.nav-primary
+      display: block
+      margin-right: 0
+
+      &.phone
+        display: none!important
+
+
 // Desktop Breakpoint (12 columns default)
 // --------------------------------------------------------------------
 +at-breakpoint($desktop)
