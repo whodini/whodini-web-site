@@ -1,8 +1,6 @@
 .developerPlatform
   .primary
-    color: white
-    min-height: 375px
-    +background(linear-gradient(darken($brand-orange, 5%), lighten(mix($brand-yellow, $brand-orange,30%), 5%)))
+    +background(darken($brand-orange, 5%))
 
     h1
       color: lighten($brand-orange, 35%)
@@ -12,6 +10,9 @@
 
     p
       color: lighten($brand-orange, 35%)
+
+    .right
+      margin-bottom: 0
 
   ul.main-nav
     .nav-primary

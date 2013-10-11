@@ -1,10 +1,13 @@
 .about
   .primary
-    // p:first-child
-    //   +leader(3)
-    // p:last-child
-    //   +trailer(1)
+    background: url(about.jpg) no-repeat center 0
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
 
+    h1, p
+      +text-shadow($brand-green-lt 0 0 20px)
 
 .head-shot
   background: $brand-grey
