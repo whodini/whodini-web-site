@@ -22,7 +22,7 @@ label
   text-transform: uppercase
 
 // TODO: move these over to whodini-web-common
-address
+address, p, li
   +adjust-font-size-to(18px)
 
 .primary
@@ -35,3 +35,11 @@ address
       color: rgba(white, .7)
       &:hover
         color: white
+
+ul, ol
+  &.indent-list
+    margin-left: -20px
+    li
+      list-style-position: inside
+      text-indent: -1em
+      margin-bottom: $base-line-height/3
