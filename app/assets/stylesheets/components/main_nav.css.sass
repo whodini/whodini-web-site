@@ -32,12 +32,12 @@ ul.main-nav
         background-color: lighten($brand-grey,  80%)
 
   .nav-primary
-    margin: 5px $base-line-height/1.5 5px 5px
+    margin: 12px $base-line-height/1.5 5px 5px
     display: none
     a
       color: white
       background: $brand-green-lt
-      padding: $base-line-height/2  $base-line-height
+      padding: 3px 10px
       +border-radius(3px)
       // margin-top: $base-line-height/.5
       // margin-bottom: $base-line-height/.5
@@ -106,8 +106,11 @@ ul.main-nav.site-nav
 
   ul.main-nav
     li.nav-primary
+      margin: 5px $base-line-height/1.5 5px 5px
       display: block
       margin-right: 0
+      a
+        padding: $base-line-height/2  $base-line-height
 
       &.phone
         display: none!important

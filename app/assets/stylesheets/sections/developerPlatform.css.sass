@@ -6,7 +6,7 @@
 
     h1
       color: lighten($brand-orange, 35%)
-      +leader(1.4)
+      +leader(0)
       strong
         color: white
 
@@ -22,3 +22,18 @@
 
   h2, h3
     color: $brand-orange
+
+  .clouds
+    display: none
+    margin-top: 110px
+    // max-width: 381px
+    width: 100%
+
++at-breakpoint($tablet)
+  .developerPlatform
+    .primary
+      h1
+        color: lighten($brand-orange, 35%)
+        +leader(1.4)
+    .clouds
+      display: block
