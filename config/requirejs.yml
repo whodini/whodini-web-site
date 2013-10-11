@@ -6,7 +6,6 @@ paths:
   ghosttype: 'plugins/jquery/jquery.ghosttype-1.2'
   waypoints: 'plugins/jquery/waypoints'
   waypoints-sticky: 'plugins/jquery/waypoints-sticky'
-  jquery-fitvids: 'plugins/jquery/jquery.fitvids'
 
 shim:
   'jquery':
@@ -20,6 +19,4 @@ shim:
   'waypoints':
     deps: ['jquery']
   'waypoints-sticky':
-    deps: ['jquery']
-  ' jquery-fitvids':
     deps: ['jquery']
