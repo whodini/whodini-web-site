@@ -29,28 +29,28 @@ require [
 
         setTimeout ->
           #show and activate the first result set
-          $('#scoreTags.three').removeClass('active')
+          $('.scoreTags.three').removeClass('active')
         ,1000
 
         setTimeout ->
-          $('#scoreTags.one').addClass('active')
+          $('.scoreTags.one').addClass('active')
         ,2000
 
         setTimeout ->
           #show and activate the second result set
-          $('#scoreTags.one').removeClass('active')
+          $('.scoreTags.one').removeClass('active')
         ,5500
 
         setTimeout ->
-          $('#scoreTags.two').addClass('active')
+          $('.scoreTags.two').addClass('active')
         ,6000
 
         setTimeout ->
           #show and activate the third result set
-          $('#scoreTags.two').removeClass('active')
+          $('.scoreTags.two').removeClass('active')
         ,10700
         setTimeout ->
-          $('#scoreTags.three').addClass('active')
+          $('.scoreTags.three').addClass('active')
         ,11000
 
     welcome.loopAnimation()

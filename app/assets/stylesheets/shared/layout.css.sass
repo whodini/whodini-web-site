@@ -47,6 +47,12 @@ section.staggered
   .content
     margin-bottom: $base-line-height
 
+  figure
+    img
+      width: 260px
+      margin: 0 auto
+      display: block
+
 section.staggered:nth-child(even)
   background: lighten($brand-grey, 88%)
   .content, figure
@@ -80,6 +86,8 @@ section.articles
     figure
       text-align: left
       +span-columns(4)
+      img
+        width: auto
 
   section.staggered:nth-child(even)
     .content
@@ -87,16 +95,6 @@ section.articles
     figure
       +span-columns(4 omega)
       text-align: right
-      // position: absolute
-      // right: 0
-      // bottom: 0
-      // margin-right: 2em
-
-  section.articles
-    article
-      // +span-columns(3)
-      // &:nth-child(3n+3)
-      //   +omega
 
 // Desktop Breakpoint (12 columns default)
 // --------------------------------------------------------------------

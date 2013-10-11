@@ -4,8 +4,7 @@ head
   title
     | #{ controller.controller_name.titleize } - #{ controller.action_name.titleize }
   meta content='' name='description'
-  meta content='width=device-width' name='viewport'
-
+  meta name="viewport" content="width=device-width, initial-scale=1.0"
   = stylesheet_link_tag 'application', media: 'all'
 
   = requirejs_include_tag "application"

@@ -1,10 +1,11 @@
 h1
+  +adjust-font-size-to(44px)
   strong
     font-weight: 400
 
 h2
   font-weight: 500
-  +adjust-font-size-to(30px)
+  +adjust-font-size-to(22px)
 
 h2, h3
   color: mix($brand-green-dk, $brand-green-lt, 50%)
@@ -27,7 +28,10 @@ address, p, ul.indent-list, ol.indent-list
 
 .primary
   small
-    float: right
+    position: absolute
+    bottom: 0
+    right: 0
+    margin-right: 2em
     background: rgba(darken($brand-green-dk, 30%), .7)
     padding: 0 10px
     +adjust-font-size-to(14px)
@@ -43,3 +47,13 @@ ul, ol
       list-style-position: inside
       text-indent: -1em
       margin-bottom: $base-line-height/3
+
+
++at-breakpoint($tablet)
+
++at-breakpoint($desktop)
+  h1
+    +adjust-font-size-to(54px)
+
+  h2
+    +adjust-font-size-to(28px)

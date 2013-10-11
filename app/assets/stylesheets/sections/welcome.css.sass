@@ -7,7 +7,7 @@
     header
       height: 450px
       +prefix(0)
-      +span-columns(10)
+      +span-columns(9)
 
     hgroup
       text-align: left
@@ -24,8 +24,10 @@
       // text-align: center
       // +leader(2)
 
+#searchField, .scoreTags
+  display: none
+
 #searchField
-  display: inline-block
   padding: 12px
   width: 350px
   font-size: 24px
@@ -39,8 +41,11 @@
     border-color: none
     outline: 0
 
++at-breakpoint($tablet)
+  #searchField, .scoreTags
+    display: inline-block
 
-ul#scoreTags
+ul.scoreTags
   position: absolute
   top: 0
   left: 50%
@@ -134,7 +139,7 @@ ul#scoreTags
         +transition(all .1s ease-in)
 
 // TODO: refactor the specificity here to dry out
-ul#scoreTags
+ul.scoreTags
   &.active
     &.one
       li

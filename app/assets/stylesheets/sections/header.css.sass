@@ -13,14 +13,21 @@
     overflow: visible
     position: relative
 
-  .whodini-logo
-    margin: $base-line-height/2 0
-    display: inline-block
-    float: left
+.whodini-logo
+  margin: $base-line-height/2 0
+  display: inline-block
+  float: left
+  img
+    width: 100px
+
 
 +at-breakpoint($tablet)
   .header.clone
     display: block
+
+  .whodini-logo
+    img
+      width: 134px
 
 body.down
   .header.clone

@@ -1,3 +1,7 @@
+/ - content_for :javascript do
+/   javascript:
+/     require(['solutions']);
+
 section.primary
 
   .centered-container
@@ -6,23 +10,24 @@ section.primary
         h1
           | Business Engagement is a
           strong
-            | &nbsp; leading&nbsp;indicator &nbsp;
+            | &nbsp; leading indicato
           | of&nbsp;business outcome
         p
-          | The power of your enterprise is vast. Your people are amazingly capable.
+          | The power of your enterprise is vast. Your people are amazingly&nbsp;capable.
           br
-          | Our technology unlocks that value.
+          | Our technology unlocks that&nbsp;value.
 
 section.secondary
   .centered-container
-    <iframe src="//player.vimeo.com/video/27730659?title=0&amp;byline=0&amp;portrait=0" width="600" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    .vimeocontainer
+      <iframe src="//player.vimeo.com/video/27730659?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 section.staggered
   .centered-container
     figure
       = image_tag("search-people.png")
     .content
-      h2 Engagement directory delivers ‘right person, right away’
+      h2 Engagement directory delivers ‘right person, right&nbsp;away’
 
       p Knowledge is resides in silos of departments, roles and distance. In groups larger than 150 people (Dunbar number), knowledge transfer begins to break down. Current means of looking for expertise within a company is driven by trying to force documentation of skills and knowledge. This is ineffective.
 

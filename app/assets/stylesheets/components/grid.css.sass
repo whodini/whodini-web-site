@@ -7,7 +7,6 @@ $tablet: 9
 $desktop: 55em 12
 // $container-style: static
 
-
 .centered-container
   position: relative
   overflow: hidden
@@ -16,6 +15,7 @@ $desktop: 55em 12
   // +susy-grid-background
 
   .col-3, .left, .right
+    margin-bottom: $base-line-height*2
     +span-columns(12)
 
   .left
@@ -44,7 +44,6 @@ $desktop: 55em 12
     // +susy-grid-background
     .col-3
       +span-columns(4)
-      margin-bottom: $base-line-height*2
       &:nth-child(3n)
         +span-columns(4 omega)
 
