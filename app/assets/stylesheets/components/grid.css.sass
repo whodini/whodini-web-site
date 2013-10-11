@@ -7,6 +7,11 @@ $tablet: 9
 $desktop: 55em 12
 // $container-style: static
 
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  .centered-container
+    position: relative
+    overflow: hidden
+
 .centered-container
   +transition(all .2s ease-in-out)
   +container($total-columns, $tablet, $desktop)
