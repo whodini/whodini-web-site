@@ -9,7 +9,6 @@
     h1, p
       +text-shadow($brand-green-lt 0 0 20px)
 
-
     .btn-primary
       @include btn-pseudo-states(darken($brand-green-lt, 15%), darken($brand-green-lt, 15%))
 
@@ -36,6 +35,9 @@
 
   &.ken
     +sprites-sprite(ken)
+
+  &.pankajm
+    +sprites-sprite(pankajm)
 
 .bios
   background: lighten($brand-grey, 83%)
@@ -70,7 +72,7 @@ ul#executiveTeam, ul#advisors
       content: ' '
       margin-left: -20px
       bottom: -28px
-      +arrow(40px, 20px, up, lighten($brand-grey, 85%))
+      +arrow(40px, 20px, up, lighten($brand-grey, 83%))
 
   .active, a:hover
 
@@ -95,6 +97,9 @@ ul#executiveTeam, ul#advisors
 
       &.ken
         +sprites-sprite(ken-active)
+
+      &.pankajm
+        +sprites-sprite(pankajm-active)
 
   .linkedin
     display: inline-block

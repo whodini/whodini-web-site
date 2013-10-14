@@ -14,13 +14,13 @@ section.staggered
     figure
       = image_tag("claw.png", :style =>"margin-top: -189px")
     .content
-      h2 Full Stack
+      h2 APIs that pick through data
       p Whodini is a full stack workforce analytics API that allows you to understand who is engaged in what within your company. With our unique tapestry of natural language processing, text analytics and scoring algorithms we transform the vast amounts of unstructured text within your organization into a structured data set which provides insight into what's going on within your company.
 
       h4 The 3 steps to insight include:
       ol.indent-list style="display: inline-block; text-align: left"
         li Selecting users
-        li Configuring data sourc
+        li Configuring data sources
         li Displaying the results
 
 
@@ -29,7 +29,7 @@ section.staggered
     figure
       = image_tag("features.png")
     .content
-      h2 API Features and other Options
+      h2 API Features
       ul.indent-list
         li <strong>Create Users</strong> - Creates users from your organization in our system.
         li <strong>Data Connections</strong> - Creates a new data source connection for the user.  If email is your data source we have a discovery service that makes it easy to configure.
@@ -46,12 +46,13 @@ section.staggered
       = image_tag("pricing.gif")
     .content
       h2 Pricing
-      p We don't have our plans figured out yet, however we intend to price on a per user analyzed per month basis.  This way you don't have to guess at # of calls or other hard to project usage metrics.  We'll offer a free plan to get started and trial periods for paid plans.
+      p While our pricing is based on a per user analyzed per month basis, we are open to exploring other options based on your specific needs. Our per user analyzed per month business model, is great for budgeting purposes. You don't have to guess at number of calls or other hard to project usage metrics. We'll offer a free plan to get started and trial periods for paid plans.
 
 
 section.secondary
-  .centered-container
+  .centered-container style="text-align: center"
     p
-      =link_to "Contact us ", contact_path
-      |to get an API key and access to our documentation.
-    p Join our community to ask questions or get help.
+      | Join our community to ask questions or get help. Get an API key and access to our documentation.
+    p
+      =link_to "Contact us ", contact_path, :class=> "btn primary"
+
