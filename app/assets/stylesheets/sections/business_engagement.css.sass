@@ -5,17 +5,15 @@
     background-position: center center
     small
       background: transparent
-      position: absolute
-      right: 0
-      bottom: 0
+      position: static
+      display: block
+      text-align: center
 
     h1, p
       +text-shadow($brand-blue 0 0 20px)
 
-  // hgroup
-  //   h1
-  //     +leader(1.4)
-  //     +trailer(1.4)
+    h1
+      +leader(.8)
 
   ul.main-nav
     .nav-primary

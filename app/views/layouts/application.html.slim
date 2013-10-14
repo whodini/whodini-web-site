@@ -12,32 +12,19 @@ html.no-js
   = render 'head'
   body class="#{controller.controller_name} #{controller.action_name}"
 
+    - if flash[:alert]
+      p.flash-error
+        a href="#" class="close" x
+        = flash[:alert]
+    - if flash[:notice]
+      p.flash-notice
+        a href="#" class="close" x
+        = flash[:notice]
+
     = render 'chromeframe'
     =render 'header'
-    section
-      .centered-container
-        - if flash[:alert]
-          p.flash-error
-            a href="#" class="close" x
-            = flash[:alert]
-        - if flash[:notice]
-          p.flash-notice
-            a href="#" class="close" x
-            = flash[:notice]
     = yield
     = render 'footer'
-
-    / javascript:
-    /   var loginComplete = function(callbackUrl) {
-    /     // TODO: use a simple pub sub plugin to do this instead of Chaplin
-
-    /     if(callbackUrl)
-    /       //Chaplin.mediator.publish('childclosed', {'callbackUrl':callbackUrl})
-    /       whodini.childClosed({ 'callbackUrl' : callbackUrl });
-    /     else
-    /       //Chaplin.mediator.publish('childclosed')
-    /       whodini.childClosed();
-    /   }
 
 
 
