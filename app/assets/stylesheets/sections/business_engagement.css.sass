@@ -11,9 +11,8 @@
 
     h1, p
       +text-shadow($brand-blue 0 0 20px)
-
     h1
-      +leader(.8)
+      +leader(.4)
 
   ul.main-nav
     .nav-primary
@@ -63,3 +62,15 @@
 
 img[alt="Safe-harbor"]
   margin: 6px 0 0 15px
+
++at-breakpoint($tablet)
+  .businessEngagement
+    .primary
+      h1
+        +leader(1.2)
+
++at-breakpoint($desktop)
+  .businessEngagement
+    .primary
+      h1
+        +leader(.8)
