@@ -9,17 +9,14 @@ section.primary
             p.error = msg
 
           fieldset.fields
-              = f.label :name
-              = mark_required(@try, :name)
+              = f.label :name, "#{mark_required(@try, :name)} Name"
               = f.text_field :name
 
-              = f.label :email
-              = mark_required(@try, :email)
+              = f.label :email, "#{mark_required(@try, :email)} Email"
               = f.text_field :email
 
-              = f.label :company
+              = f.label :company, "#{mark_required(@try, :company)} Company"
               = f.text_field   :company
-              = mark_required(@try, :company)
           fieldset.actions
             = f.submit "Send", :class=> "btn"
 

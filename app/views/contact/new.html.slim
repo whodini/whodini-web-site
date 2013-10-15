@@ -24,16 +24,13 @@ section
             p.error = msg
 
           fieldset.fields
-              = f.label :name
-              = mark_required(@message, :name)
+              = f.label :name, "#{mark_required(@message, :name)} Name"
               = f.text_field :name
 
-              = f.label :email
-              = mark_required(@message, :email)
+              = f.label :email, "#{mark_required(@message, :email)} Email"
               = f.text_field :email
 
-              = f.label :body, 'Message'
+              = f.label :body, "#{mark_required(@message, :body)} Message"
               = f.text_area :body, :rows => "4"
-              = mark_required(@message, :body)
           fieldset.actions
             = f.submit "Send", :class=> "btn"

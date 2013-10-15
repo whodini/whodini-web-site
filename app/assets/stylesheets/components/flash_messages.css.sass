@@ -7,6 +7,7 @@
   text-align: center
   font-weight: 400
   margin: 0
+  z-index: 9999
 
   .close
     color: inherit
@@ -44,4 +45,14 @@
 
 .field_with_errors
   input
-    border: 1px solid red
+    border: 1px solid darken(red, 15%)
+
+label, .required
+  display: inline-block
+  color: lighten($brand-grey, 50%)
+
+.error
+  color: darken(red, 15%)
+
+.required
+  padding: 0 3px 0 0
