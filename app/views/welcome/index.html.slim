@@ -3,52 +3,33 @@
     require(['welcome']);
 
 section.primary
-  / ul.scoreTags.one
-  /   li 46&nbsp;<b class="carat-sm"></b><i class="line"></i><i class="circle"></i>
-  /   li 55&nbsp;<b class="carat-sm"></b><i class="line"></i><i class="circle"></i>
-  /   li 62&nbsp;<b class="carat-sm"></b><i class="line"></i><i class="circle"></i>
-  /   li 63&nbsp;<b class="carat-sm"></b><i class="line"></i><i class="circle"></i>
-
-  / ul.scoreTags.two
-  /   li 30&nbsp;<b class="carat-sm"></b><i class="line"></i><i class="circle"></i>
-  /   li 98&nbsp;<b class="carat-sm"></b><i class="line"></i><i class="circle"></i>
-
-  / ul.scoreTags.three
-  /   li 70&nbsp;<b class="carat-sm"></b><i class="line"></i><i class="circle"></i>
-  /   li 64&nbsp;<b class="carat-sm"></b><i class="line"></i><i class="circle"></i>
-  /   li 80&nbsp;<b class="carat-sm"></b><i class="line"></i><i class="circle"></i>
-
   .centered-container
     header
       hgroup
-        h1
-          Employee Engagement to &nbsp;Business Intelligence
-          <input id="searchField" disabled></input>
     = render("whats_a_whodini_score")
 
 section
   .centered-container
     .col-3
 
+      h4 Why Whodini?
       = link_to technology_businessEngagement_path do
-        / = image_tag "engagement-green.png"
         h2 Workforce Engagement
 
       p Workforce engagement is the intensity and quality of employees’ interaction with and about customers, products, projects and vendors. We invented a method to measure and quantify engagement. Individuals and businesses can measure and track interactions as well as predict and influence outcomes. We call this the Whodini score. It is a leading indicator of success, or failure.
       h4  = link_to raw("Learn More &rsaquo;"), technology_businessEngagement_path
 
     .col-3
-
+      h4 What is Whodini?
       = link_to technology_solutions_path do
-        / = image_tag "graph-green.png"
         h2 Business Solutions
 
       p 85% of all business communications occurs electronically.   Yet fewer than 15% of Fortune 500 organizations are able to effectively exploit this data. Our technology provides automatic evidenced-based workforce engagement. This information provides critical insight that business leaders can use to make better business decisions across multiple functions.
       h4  = link_to raw("Learn More &rsaquo;"), technology_solutions_path
 
     .col-3
+      h4 How Does it Work?
       = link_to technology_developerPlatform_path do
-        / = image_tag "developer-green.png"
         h2 Developer Platform
 
       p We enable developers, system integrators and consulting companies to integrate Whodini APIs into their product and service offerings. Because our technology enhances and extends the capability of investments already made in existing systems, platforms and tools, companies can see results instantaneously.
