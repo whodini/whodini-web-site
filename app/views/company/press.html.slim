@@ -1,10 +1,20 @@
+- content_for :javascript do
+  javascript:
+    require(['press']);
+
 section
   .centered-container
     header
       hgroup
         h1 News & Press
 
-section.staggered
+section.secondary
+  ul.logo-strip
+    -12.times do |i|
+      li
+        a href="#story#{i}"
+
+section.staggered#story0
   .centered-container.up
     figure
     .content
@@ -12,7 +22,7 @@ section.staggered
       h5 by Claire Topalian on 5-28-2013
       p "We’re excited to announce that Grapple, a startup to originate at Startup Weekend SLO last year, was just acquired by Whodini Inc. "
 
-section.staggered
+section.staggered#story1
   .centered-container.esg
     figure
     .content
@@ -20,7 +30,7 @@ section.staggered
       h5 by Tom Petrocelli on 3-6-2012
       p "Finding an expert in a large company can be a daunting task. Finding the right expert with the right skills can be close to impossible. Whodini solves this problem by creating profiles based on what users actually do and not what they say they do."
 
-section.staggered
+section.staggered#story2
   .centered-container.svbj
     figure
     .content
@@ -30,7 +40,7 @@ section.staggered
           | "Enterprise-level companies often have tens of thousands of employees, and finding the right person to collaborate with can become problematic.
           | Los Altos-based Whodini Inc. has a solution. The enterprise software startup has created a system that can tell anyone -- in even the largest enterprises -- what everyone else in the company actually does."
 
-section.staggered
+section.staggered#story3
   .centered-container.business-makers
     figure
     .content
@@ -38,7 +48,7 @@ section.staggered
       h5 by The Businessmakers on 2-20-11
       p "This software sits there and intelligently figures out what you're good at, what you're not good at, what you are doing, what you have done and who could help you and who you could help across time zones, across continents, across floors, across buildings."
 
-section.staggered
+section.staggered#story4
   .centered-container.gigaom
     figure
     .content
@@ -46,7 +56,7 @@ section.staggered
       h5 by Jessica Stillman on 11-17-2011
       p "This profile is searchable by employees anywhere in the company, whether they're based in Mumbai, India or Menlo Park, Calif. So if a sales guy in Chicago is looking for an expert on a prospective client or a complicated technical subject, all he needs to do is search Whodini to find colleagues in any part of the world with the knowledge he needs."
 
-section.staggered
+section.staggered#story5
   .centered-container.nww
     figure
     .content
@@ -54,7 +64,7 @@ section.staggered
       h5  by Brad Reed on 9-14-2011
       p "Whodini doesn't want you to waste an entire day emailing coworkers looking for the one guy in your company who knows the ins and outs of SIP trunks. Instead they want you to type 'SIP trunks' into its database of profiles to find the exact person in your company who can best help you out.â"
 
-section.staggered
+section.staggered#story6
   .centered-container.reuters
     figure
     .content
@@ -63,7 +73,7 @@ section.staggered
       h5 by Mark Boslet on 9-14-2011
       p "Another company almost certain to attract VC interest is Whodini. The Los Altos, California-based company's online service lets corporate customers identify in-house experts and distribute their names to other employees."
 
-section.staggered
+section.staggered#story7
   .centered-container.wsj
     figure
     .content
@@ -71,7 +81,7 @@ section.staggered
       h5 by Debora Gage on 9-14-2011
       p "[Tom] Gillis (VP, Cisco), [Larry] Augustin (CEO, SugarCRM) and North Bridge Venture Partners General Partner Paul Santinelli all said they'd invest in two products that had just launched at Demo-Fluxx from Fluxxlabs, a dashboard for aggregating corporate data, and Whodini from Whodini Inc., a service for parsing corporate e-mails and other information to connect people inside a company who should be working together."
 
-section.staggered
+section.staggered#story8
   .centered-container.cio
     figure
     .content
@@ -79,7 +89,7 @@ section.staggered
       h5 by Tom Kaneshige on 9-13-2011
       p "All three executives said they liked Whodini's ability for co-workers who have never actually met to find each other and collaborate on projects"
 
-section.staggered
+section.staggered#story9
   .centered-container.venture-beat
     figure
     .content
@@ -87,7 +97,7 @@ section.staggered
       h5 by Regina Sinksy on 9-13-2011
       p "There are people in companies who just do their work. Those people are not squeaky wheels or self-promoters, but they are often the ones who really get things done. Whodini doesn't have the noise that something like a Social Business Network does. You can't hog a discussion thread or reply to every question, because that's not what our software looks at. We look at what you are actually doing, the knowledge that you actually have. The quiet achiever gets recognized for what they know."
 
-section.staggered
+section.staggered#story10
   .centered-container.svbj
     figure
     .content
@@ -95,7 +105,7 @@ section.staggered
       h5 by Diana Samuels on 9-13-2011
       p "People in large companies generally work with the same few dozen people, and might not know who to ask for help if they have a problem or want advice in a specific area. Whodini analyzes an employee's email to determine their areas of expertise, such as 'cloud computing' or 'network configuration.'"
 
-section.staggered
+section.staggered#story11
   .centered-container.computer-world
     figure
     .content

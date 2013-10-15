@@ -14,40 +14,58 @@ body.press
       background-repeat: no-repeat
       +opacity(.5)
 
-.esg figure
+.esg figure, a[href="#story0"]
   background: image-url("logos/esg-logo.png")
 
-.svbj figure
+.up figure, a[href="#story1"]
+  background: image-url("logos/up-logo.png")
+
+.svbj figure, a[href="#story2"]
   background: image-url("logos/svbj-logo.png")
 
-.business-makers figure
+.business-makers figure, a[href="#story3"]
   background: image-url("logos/business-makers-logo.png")
 
-.gigaom figure
+.gigaom figure, a[href="#story4"]
   background: image-url("logos/gigaom-logo.png")
 
-.nww figure
+.nww figure, a[href="#story5"]
   background: image-url("logos/nww-logo.png")
 
-.reuters figure
+.reuters figure, a[href="#story6"]
   background: image-url("logos/reuters-logo.png")
 
-.wsj figure
+.wsj figure, a[href="#story7"]
   background: image-url("logos/wsj.png")
 
-.cio figure
+.cio figure, a[href="#story8"]
   background: image-url("logos/cio-logo.png")
 
-.venture-beat figure
+.venture-beat figure, a[href="#story9"]
   background: image-url("logos/venture-beat-logo.png")
 
-.svbj figure
+.svbj figure, a[href="#story10"]
   background: image-url("logos/svbj-logo.png")
 
-.computer-world figure
+.computer-world figure, a[href="#story11"]
   background: image-url("logos/cw-logo.png")
 
-.up figure
-  background: image-url("logos/up-logo.png")
+ul.logo-strip
+  margin: 0
+  padding: 0
+  li
+    display: inline-block
+    width: 8.333%
+    a
+      background-position: center center
+      background-repeat: no-repeat
+      background-size: 65%
+      display: inline-block
+      width: 100%
+      height: 120px
+      +transition(opacity .2s ease-in-out)
+      +opacity(.5)
+      &:hover
+        +opacity(1)
 
 
