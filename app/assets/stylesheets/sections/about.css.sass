@@ -66,6 +66,12 @@ ul#executiveTeam, ul#advisors
     position: relative
     padding: 0 $base-line-height
 
+    // mobile only
+    h4, p
+      +adjust-font-size-to(16px)
+      text-align: left
+    // end mobile only
+
   .active
     &:after
       position: absolute
