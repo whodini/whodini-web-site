@@ -14,8 +14,8 @@ body.press
       background-repeat: no-repeat
       +opacity(.5)
 
-.esg figure, a[href="#story0"]
-  background: image-url("logos/esg-logo.png")
+.cal-poly figure, a[href="#story0"]
+  background: image-url("logos/cal-poly-logo.png")
 
 .up figure, a[href="#story1"]
   background: image-url("logos/up-logo.png")
@@ -55,7 +55,8 @@ ul.logo-strip
   padding: 0
   li
     display: inline-block
-    width: 8.333%
+    float: left
+    width: 16.666%
     a
       background-position: center center
       background-repeat: no-repeat
@@ -63,9 +64,18 @@ ul.logo-strip
       display: inline-block
       width: 100%
       height: 120px
-      +transition(opacity .2s ease-in-out)
+      -webkit-transform: translateZ(0) //stops animation from flickering on hover
+      +transition(all .2s ease-in-out)
       +opacity(.5)
       &:hover
         +opacity(1)
 
+    &:nth-child(7n)
+      clear: left
 
++at-breakpoint($tablet)
+  ul.logo-strip
+    li
+      width: 8.333%
+      &:nth-child(7n)
+        clear: none
