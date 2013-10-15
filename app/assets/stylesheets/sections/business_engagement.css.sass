@@ -3,16 +3,13 @@
     +background(image-url("numbers.png"), $brand-blue)
     background-repeat: no-repeat
     background-position: center center
-    small
-      background: transparent
-      position: static
-      display: block
-      text-align: center
 
     h1, p
       +text-shadow($brand-blue 0 0 20px)
     h1
       +leader(.4)
+    p
+      +trailer(2)
 
   ul.main-nav
     .nav-primary

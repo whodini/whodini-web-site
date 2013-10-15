@@ -19,14 +19,21 @@ section
           = link_to "info@whodini.com", 'mailto:info@whodini.com'
 
       .right
-        = form_for @message, :url => contact_path do |f|
+        = form_for @message, :url =>contact_path do |f|
+          - @message.errors.full_messages.each do |msg|
+            p.error = msg
+
           fieldset.fields
               = f.label :name
+              = mark_required(@message, :name)
               = f.text_field :name
+
               = f.label :email
+              = mark_required(@message, :email)
               = f.text_field :email
+
               = f.label :body, 'Message'
               = f.text_area :body, :rows => "4"
+              = mark_required(@message, :body)
           fieldset.actions
             = f.submit "Send", :class=> "btn"
-

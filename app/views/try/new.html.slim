@@ -5,13 +5,21 @@ section.primary
         h1 Try Whodini
 
         = form_for @try, :url => try_path do |f|
+          - @try.errors.full_messages.each do |msg|
+            p.error = msg
+
           fieldset.fields
               = f.label :name
+              = mark_required(@try, :name)
               = f.text_field :name
+
               = f.label :email
+              = mark_required(@try, :email)
               = f.text_field :email
+
               = f.label :company
               = f.text_field   :company
+              = mark_required(@try, :company)
           fieldset.actions
             = f.submit "Send", :class=> "btn"
 

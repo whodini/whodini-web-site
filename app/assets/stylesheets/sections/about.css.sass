@@ -101,6 +101,7 @@ ul#executiveTeam, ul#advisors
       &.pankajm
         +sprites-sprite(pankajm-active)
 
+
   .linkedin
     display: inline-block
     text-indent: -999px
@@ -113,3 +114,9 @@ ul#executiveTeam, ul#advisors
     &:hover
       +opacity(1)
       +sprites-sprite(linkedin)
+
++at-breakpoint($tablet)
+  .about
+    .primary
+      h1
+        +leader(.4)

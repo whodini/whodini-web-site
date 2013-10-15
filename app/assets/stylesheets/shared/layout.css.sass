@@ -30,15 +30,15 @@ hgroup
 
       p
         +adjust-font-size-to(16px)
-      p:last-child
-        +trailer(2)
+      // p:last-child
+        // +trailer(2)
 
 .solutions, .developerPlatform
   h1
     +adjust-font-size-to(46px)
 
-  p:last-child
-    +trailer(1)
+  // p:last-child
+    // +trailer(1)
 
 section
   .centered-container
@@ -93,11 +93,10 @@ section.articles
       .centered-container
         min-height: 375px
 
-  .primary, .secondary
-    h1
-      +leader(1.5)
-    p:last-child
-      +trailer(3)
+      h1
+        +leader(1)
+        // p:last-child
+        //   +trailer(3)
 
   section.staggered
     .content
@@ -120,8 +119,8 @@ section.articles
 // --------------------------------------------------------------------
 +at-breakpoint($desktop)
 
-  .primary, .secondary
-    header
+  // .primary, .secondary
+  //   header
       // +span-columns(11)
       // +prefix(1)
 

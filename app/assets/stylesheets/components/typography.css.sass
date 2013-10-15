@@ -27,18 +27,10 @@ address, p, ul.indent-list, ol.indent-list
   +adjust-font-size-to(18px)
 
 .primary
-  small
-    position: absolute
-    bottom: 0
-    right: 0
-    margin-right: 2em
-    background: rgba(darken($brand-green-dk, 30%), .7)
-    padding: 0 10px
-    +adjust-font-size-to(14px)
-    a
-      color: rgba(white, .7)
-      &:hover
-        color: white
+  a
+    color: rgba(white, .7)
+    &:hover
+      color: white
 
 ul, ol
   &.indent-list
@@ -47,6 +39,17 @@ ul, ol
       list-style-position: inside
       text-indent: -1em
       margin-bottom: $base-line-height/3
+
+  &.no-bullets
+    padding-left: 0
+    li
+      list-style-type: none
+      margin-bottom: $base-line-height/3
+
+  &.compact-list
+    margin-top: 0
+    li
+      margin-bottom: 0
 
 
 +at-breakpoint($tablet)
