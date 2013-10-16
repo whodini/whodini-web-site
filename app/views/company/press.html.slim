@@ -7,12 +7,12 @@ section
     header
       hgroup
         h1 News & Press
+        ul.logo-strip
+          -12.times do |i|
+            li
+              a href="#story#{i}"
 
-section.secondary
-  ul.logo-strip
-    -12.times do |i|
-      li
-        a href="#story#{i}"
+hr
 
 section.staggered#story0
   .centered-container.cal-poly
