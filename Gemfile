@@ -43,7 +43,7 @@ group :assets do
 
   # Advanced typographic scale
   # https://github.com/Team-Sass/modular-scale
-  gem 'modular-scale'
+  # gem 'modular-scale'
 
   # Susy is a responsive grid system
   # Compass is to Susy as Burbon is to Neat.

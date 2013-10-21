@@ -243,7 +243,6 @@ DEPENDENCIES
   fog
   haml-rails
   jquery-rails
-  modular-scale
   nkss-rails!
   rails (= 3.2.14)
   requirejs-rails (= 0.9.1)!

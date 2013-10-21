@@ -1,4 +1,4 @@
-root: '/public/dev-assets'
+root: '/app/assets/stylesheets'
 title: "Whodini"
 sections:
   1: Overview
