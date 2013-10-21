@@ -19,8 +19,6 @@ WhodiniWebSite::Application.routes.draw do
   # redirect_to_whodini_app
   post "/redirect_to_whodini_app"=> "welcome#redirect_to_whodini_app"
 
-  match '*path' => redirect('/') if Rails.env.production?
-
   # contact form mailer
   match 'contact' => 'contact#new', :as => 'contact', :via => :get
   match 'contact' => 'contact#create', :as => 'contact', :via => :post
@@ -35,4 +33,6 @@ WhodiniWebSite::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
+  # Catch all route should always be at the end.
+  match '*path' => redirect('/') if Rails.env.production?
 end
