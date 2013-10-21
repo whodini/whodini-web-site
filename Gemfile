@@ -20,21 +20,51 @@ gem 'requirejs-rails', '0.9.1', :git => 'https://github.com/jwhitley/requirejs-r
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
+  # Most of these gems help in building UI components quickly, consistiently and in a cross browser way
+  # so that we can avoid bloated UI libraries (who's styles must be inefficiently overridden)
+  # such as Twitter Bootstrap or Zurb Foundation
+  # Compass and sass are at the core of this approach.
+
+  # This gem provides official integration for Ruby on Rails projects with the Sass stylesheet language.
+  # https://github.com/rails/sass-rails
   gem 'sass-rails'
+
+  # Compass is an open-source CSS Authoring Framework.
+  # https://github.com/Compass/compass-rails
   gem 'compass-rails'
-  gem 'coffee-rails'
+
+  # Lots of CSS Recipes, made with Compass using Sass. Ready to use.
+  # http://compass-recipes.moox.fr/
   gem 'compass-recipes'
+
+  # CoffeeScript adapter for the Rails asset pipeline
+  # https://github.com/rails/coffee-rails
+  gem 'coffee-rails'
+
+  # Advanced typography scale
+  # https://github.com/Team-Sass/modular-scale
   gem 'modular-scale'
-  gem 'susy' #robust grid system: http://susy.oddbird.net/#susy-oddbird-net
+
+  # Susy is a responsive grid system
+  # Compass is to Susy as Burbon is to Neat.
+  # http://susy.oddbird.net/#susy-oddbird-net
+  gem 'susy'
+
+  # http://html5boilerplate.com/
+  # https://github.com/sporkd/compass-h5bp
   gem 'compass-h5bp'
   gem 'haml-rails'
   gem 'slim-rails'
 
+  # Mixins to write advanced css3 animations
+  # https://github.com/ericam/compass-animation
   gem 'animation'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby
 
+  # Create styleguides for Rails 3.2 projects
+  # https://github.com/nadarei/nkss-rails
   gem 'uglifier', '>= 1.0.3'
   gem 'nkss-rails', github: 'nadarei/nkss-rails'
 end
