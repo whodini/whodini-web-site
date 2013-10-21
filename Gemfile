@@ -41,7 +41,7 @@ group :assets do
   # https://github.com/rails/coffee-rails
   gem 'coffee-rails'
 
-  # Advanced typography scale
+  # Advanced typographic scale
   # https://github.com/Team-Sass/modular-scale
   gem 'modular-scale'
 
