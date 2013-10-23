@@ -6,14 +6,21 @@ section.primary
   .centered-container
     header
       hgroup
-        h1  Your company is&nbsp;in&nbsp;a&nbsp;race.
-        p Workforce analytics to improve every&nbsp;outcome
-    = render("whats_a_whodini_score")
-    = link_to "Learn More".html_safe, "#why"
+        h1  &nbsp;Lorem ipsum dolor sit amet. <br> &nbsp; Ut enim ad minim veniam quis nostru&nbsp;
+        ul.hero-icons
+          li
+            =link_to "<b>HR</b>".html_safe, "/#"
+          li
+            =link_to "<b>Engineering</b>".html_safe, "/#"
+          li
+            =link_to "<b>Sales</b>".html_safe, "/#"
+          li
+            =link_to "<b>M&A</b>".html_safe, "/#"
 
+    = render("whats_a_whodini_score")
 
 section
-  .centered-container#why
+  .centered-container
     .col-3
 
       h4 Why Whodini
