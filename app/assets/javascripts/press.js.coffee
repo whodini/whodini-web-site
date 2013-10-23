@@ -4,7 +4,6 @@ require [
 ], ($, _) ->
 
   $ ->
-    console.log 'init press js'
     $(".logo-strip a").click (event) ->
       event.preventDefault()
       id = $(event.target).attr('href')

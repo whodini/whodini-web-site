@@ -8,25 +8,52 @@
 
 
     header
-      height: 439px
+      height: 653px
 
     hgroup
       text-align: center
 
     h1
-      +adjust-font-size-to(42px)
-      +leader(.5)
-      background-color: mix($brand-green-lt, $brand-green-dk, 80%)
-      display: inline
-      color: white
-      position: relative
-      top: 65px
-      line-height: 1.6em
+      // +adjust-font-size-to(42px)
+      // +leader(.5)
+      // background-color: mix($brand-green-lt, $brand-green-dk, 80%)
+      // display: inline
+      // color: white
+      // position: relative
+      // top: 65px
+      // line-height: 1.6em
+      +trailer(0)
+    p
+      +leader(0)
+      +adjust-font-size-to(22px)
 
   .col-3
     img
       display: block
       margin: $base-line-height*2 auto 0 auto
       +opacity(.5)
+
+a[href="#why"]
+  position: absolute
+  bottom: 0
+  display: block
+  left: 50%
+  margin-left: -24px
+  text-indent: -999px
+  // text-align: center
+  text-decoration: none
+  margin-bottom: $base-line-height
+  width: 48px
+  height: 31px
+  +sprites-sprite(white-arrow)
+  +opacity(.7)
+  +transition(all .2s ease-in-out)
+
+  &:hover
+    +opacity(1)
+    bottom: -3px
+
+.what-is
+  background: rgba(darken($brand-green-dk, 30%), .8)
 
 +at-breakpoint($tablet)
