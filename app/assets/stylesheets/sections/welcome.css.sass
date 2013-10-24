@@ -10,7 +10,7 @@
     background-size: cover
 
     header
-      height: 500px
+      height: 501px
 
     hgroup
       text-align: center
@@ -18,11 +18,11 @@
     h1
       +leader(1)
       +adjust-font-size-to(42px)
-      background-color: mix($brand-green-lt, $brand-green-dk, 80%)
+      background-color: mix($brand-green-lt, $brand-green-dk, 50%)
       display: inline
       color: white
       position: relative
-      top: 50px
+      top: 40px
       line-height: 1.6em
 
   .col-3
@@ -34,7 +34,7 @@
 ul.hero-icons
   margin: 0
   padding: 0
-  margin-top: 90px
+  margin-top: 66px
   li
     display: inline-block
     &:not(:last-child)
@@ -51,12 +51,19 @@ ul.hero-icons
   a
     display: block
     position: relative
-    color: #1d5e25
+    color: white
+    -webkit-transform: translateZ(0)
+    +transition(all .2s ease-in-out)
+    +text-shadow(#85a6ad 0 0 20px)
     +square(90px)
+    &:hover
+      +scale(1.05)
 
   b
     display: block
+    font-weight: 300
     position: absolute
+    bottom: -35px
     width: 100%
-    margin-top: -30px
+
 
