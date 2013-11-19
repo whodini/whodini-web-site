@@ -1,18 +1,17 @@
 define [
-  "whodini_main/config"
+  "config"
 ], (config) ->
 
+  # returns the value of the key based on the environment
   getValue: (key) ->
     env = undefined
     switch window.location.hostname
       when "localhost", "127.0.0.1"
-        env = "Local"
-      when "ec2-54-215-119-173.us-west-1.compute.amazonaws.com"
-        env = "Dev"
-      when "staging"
-        env = "Staging"
-      when "production"
-        env = "Production"
+        env = "local"
+      when "corp.whodini.com"
+        env = "staging"
+      when "whodini.com"
+        env = "production"
       else
         throw ("Unknown environment: " + window.location.hostname)
     value = config[env][key] ? config['defaults'][key]
