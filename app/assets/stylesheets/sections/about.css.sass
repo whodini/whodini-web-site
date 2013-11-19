@@ -12,6 +12,25 @@
     .btn-primary
       @include btn-pseudo-states(darken($brand-green-lt, 15%), darken($brand-green-lt, 15%))
 
+.motion
+  position: absolute
+  content: ' '
+  top: 45%
+
+  &.lt
+    left: 0
+    +arrow(20px, 60px, left, lighten($brand-grey, 64%))
+    
+    &:hover
+      +arrow(20px, 60px, left, lighten($brand-green-lt, 15%))
+
+  &.rt
+    right: 0
+    +arrow(20px, 60px, right, lighten($brand-grey, 64%))
+    
+    &:hover
+      +arrow(20px, 60px, right, lighten($brand-green-lt, 15%))
+
 .head-shot
   background: $brand-grey
   margin: 0 auto
