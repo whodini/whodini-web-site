@@ -20,7 +20,7 @@ require [
     $('body').append($header.clone().addClass("clone"))
     $(window).on "scroll", ->
       top = $(document).scrollTop()
-      $('body').toggleClass "down", (top > 100)
+      $('body').toggleClass "down", (top > 0)
 
 
 
