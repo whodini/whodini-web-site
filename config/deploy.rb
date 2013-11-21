@@ -1,10 +1,11 @@
 require 'hipchat/capistrano'
+set :hipchat_send_notification, true
 set :hipchat_token, "e1daf8836fed69949b7d9ea31323ad"
 set :hipchat_room_name, "Dev Room"
 set :hipchat_announce, false # notify users?
-set :hipchat_env, :env
 set :hipchat_color, 'green' #finished deployment message color
 set :hipchat_failed_color, 'red' #cancelled deployment message color
+set :hipchat_deploy_user, 'Capistrano'
 
 set :application, "whodini-corp"
 
@@ -47,14 +48,6 @@ set :branch, "master"
 set :deploy_via, :remote_cache
 set :repository,  "https://b9baf1fb4e6db4643c1bf43ca9e0fb64a51cb4ff:x-oauth-basic@github.com/whodini/whodini-web-site.git"
 
-set :rvm_ruby_string, "2.0.0"               # use the same ruby as used locally for deployment
-set :rvm_autolibs_flag, :fail        # more info: rvm help autolibs
-
-before 'deploy:setup', 'rvm:install_rvm'   # install RVM
-before 'deploy:setup', 'rvm:install_ruby'  # install Ruby and create gemset, OR:
-before 'deploy:setup', 'rvm:create_gemset' # only create gemset
-
-require "rvm/capistrano"
 set :ec2_helper, Ec2Helper.new(fetch(:aws_region))
 
 # if you want to clean up old releases on each deploy uncomment this:

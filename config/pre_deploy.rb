@@ -1,3 +1,8 @@
+require "rvm/capistrano"
+
+set :rvm_ruby_string, "2.0.0"               # use the same ruby as used locally for deployment
+set :rvm_autolibs_flag, :fail        # more info: rvm help autolibs
+
 namespace :deploy do
 
   namespace :pre do
@@ -26,6 +31,9 @@ namespace :deploy do
       disablecurlsslval
       preruby
       updategit
+      rvm.install_rvm   # install RVM
+      rvm.install_ruby  # install Ruby and create gemset, OR:
+      rvm.create_gemset # only create gemset
     end
 
     desc "update git"
