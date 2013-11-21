@@ -44,30 +44,22 @@ require [
       # siblings is a list, specify which sibling
       teamList = '#' + $(this).siblings('.slider').attr('id') # executiveSlider or advisorsSlider
       # how to replace a call wtih a variable
-      # direction = 'prev()' if $(this).hasClass('lt')
-      # direction = 'next()' if $(this).hasClass('rt')
-      # console.log 'direction: ' + direction
+      direction = 'prev' if $(this).hasClass('lt')
+      direction = 'next' if $(this).hasClass('rt')
+      console.log 'direction: ' + direction
 
 
       activeImg = $(imageGroup + ' li.active')
       activeBio = $(teamList + ' li.active')
       if activeImg.hasClass('first') && $(this).hasClass('lt')
-        # console.log 'first'
         $(imageGroup + ' li.last').addClass('active')
         $(teamList + ' li.last').addClass('active')
       else if activeImg.hasClass('last') && $(this).hasClass('rt')
-        #console.log 'last'
         $(imageGroup + ' li.first').addClass('active')
         $(teamList + ' li.first').addClass('active')
-      # else
-        # console.log 'not first'
-        # activeImg.direction.addClass('active')
-        # activeBio.direction.addClass('active')
-      else if $(this).hasClass('lt')
-        activeImg.prev().addClass('active')
-        activeBio.prev().addClass('active')
-      else if $(this).hasClass('rt')
-        activeImg.next().addClass('active')
-        activeBio.next().addClass('active')
+      else # call the function by using a string
+        activeImg[direction]().addClass('active')
+        activeBio[direction]().addClass('active')
+      
       activeImg.removeClass('active')
       activeBio.removeClass('active')
