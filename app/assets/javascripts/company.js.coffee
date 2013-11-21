@@ -41,11 +41,9 @@ require [
         imageGroup = '#executiveTeam'
       else
         imageGroup = '#advisors'
-      teamList = '#' + $(this).siblings().attr('id') if $(this).hasClass('lt') # executiveSlider or advisorsSlider
-      # siblings not working for previous? why?
-      teamList = '#' + $(this).prev().attr('id') if $(this).hasClass('rt') # executiveSlider or advisorsSlider
-      # console.log 'teamList: ' + teamList
-      # couldn't get direction to work in else
+      # siblings is a list, specify which sibling
+      teamList = '#' + $(this).siblings('.slider').attr('id') # executiveSlider or advisorsSlider
+      # how to replace a call wtih a variable
       # direction = 'prev()' if $(this).hasClass('lt')
       # direction = 'next()' if $(this).hasClass('rt')
       # console.log 'direction: ' + direction
@@ -54,7 +52,7 @@ require [
       activeImg = $(imageGroup + ' li.active')
       activeBio = $(teamList + ' li.active')
       if activeImg.hasClass('first') && $(this).hasClass('lt')
-        #console.log 'first'
+        # console.log 'first'
         $(imageGroup + ' li.last').addClass('active')
         $(teamList + ' li.last').addClass('active')
       else if activeImg.hasClass('last') && $(this).hasClass('rt')
@@ -62,7 +60,7 @@ require [
         $(imageGroup + ' li.first').addClass('active')
         $(teamList + ' li.first').addClass('active')
       # else
-      #   console.log 'not first'
+        # console.log 'not first'
         # activeImg.direction.addClass('active')
         # activeBio.direction.addClass('active')
       else if $(this).hasClass('lt')
