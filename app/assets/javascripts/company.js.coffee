@@ -46,8 +46,6 @@ require [
       # how to replace a call wtih a variable
       direction = 'prev' if $(this).hasClass('lt')
       direction = 'next' if $(this).hasClass('rt')
-      console.log 'direction: ' + direction
-
 
       activeImg = $(imageGroup + ' li.active')
       activeBio = $(teamList + ' li.active')
