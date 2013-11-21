@@ -78,10 +78,12 @@ gem 'fog'
 gem 'colored'
 gem 'thin'
 
-	# To use debugger
-	# gem 'debugger'
-	gem 'rvm-capistrano' # Gems for production only
+# To use debugger
+# gem 'debugger'
+gem 'rvm-capistrano' # Gems for production only
 
+# Hipchat integration gem
+gem 'hipchat'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

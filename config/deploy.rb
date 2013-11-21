@@ -1,4 +1,12 @@
-set :application, "Whodini-corporate"
+require 'hipchat/capistrano'
+set :hipchat_token, "e1daf8836fed69949b7d9ea31323ad"
+set :hipchat_room_name, "Dev Room"
+set :hipchat_announce, false # notify users?
+set :hipchat_env, :env
+set :hipchat_color, 'green' #finished deployment message color
+set :hipchat_failed_color, 'red' #cancelled deployment message color
+
+set :application, "whodini-corp"
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
@@ -17,7 +25,8 @@ set :application, "Whodini-corporate"
 #   end
 # end
 #
-set :deploy_to, "/opt/whodini"
+set :whodini_home, "/opt/whodini"
+set :deploy_to, "#{whodini_home}/#{application}"
 ssh_options[:keys] = [File.join(ENV["HOME"],".ssh","devinlogy.pem")]
 require 'cap_git_tools/tasks'
 #Add groups and server info from the AWS
@@ -80,7 +89,7 @@ namespace :deploy do
   end
 
 	def run_thin_cmd(command)
-		run wrapin_bundle_command("thin #{command} -p 80 -d -e #{fetch(:env)}")
+		run wrapin_bundle_command("thin #{command} -p #{thin_port} -d -e #{fetch(:env)}")
 	end
 
 end
