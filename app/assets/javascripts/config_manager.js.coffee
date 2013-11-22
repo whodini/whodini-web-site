@@ -12,6 +12,8 @@ define [
         env = "staging"
       when "dev.whodini.com"
         env = "staging"
+      when "www.whodini.com"
+        env = "production"
       when "whodini.com"
         env = "production"
       else
