@@ -10,6 +10,8 @@ define [
         env = "local"
       when "corp.whodini.com"
         env = "staging"
+      when "dev.whodini.com"
+        env = "staging"
       when "whodini.com"
         env = "production"
       else
