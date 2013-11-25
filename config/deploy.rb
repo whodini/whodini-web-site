@@ -54,6 +54,10 @@ set :ec2_helper, Ec2Helper.new(fetch(:aws_region))
 after "deploy:update", "deploy:dbcreate"
 after "deploy:restart", "deploy:cleanup"
 
+# Report the deployment progress on hipchat
+after  "deploy:dbcreate", "hipchat:notify_deploy_finished"
+
+
 namespace :deploy do
 #   task :start do ; end
 #   task :stop do ; end
