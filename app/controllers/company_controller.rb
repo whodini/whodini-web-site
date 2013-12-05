@@ -4,8 +4,8 @@ class CompanyController < ApplicationController
   def about
   end
 
-  # def careers
-  # end
+  def careers
+  end
 
   def press
   end
