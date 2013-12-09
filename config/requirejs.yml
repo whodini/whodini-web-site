@@ -3,7 +3,7 @@ paths:
   underscore: 'underscore'
   jquery-spin: 'plugins/jquery/jquery.spin'
   spin: 'plugins/jquery/spin'
-  ghosttype: 'plugins/jquery/jquery.ghosttype-1.2'
+  # ghosttype: 'plugins/jquery/jquery.ghosttype-1.2'
   waypoints: 'plugins/jquery/waypoints'
   waypoints-sticky: 'plugins/jquery/waypoints-sticky'
 
@@ -14,8 +14,8 @@ shim:
     exports: '_'
   'jquery-spin':
     deps: ['jquery', 'spin']
-  'ghosttype':
-    deps: ['jquery']
+  # 'ghosttype':
+  #   deps: ['jquery']
   'waypoints':
     deps: ['jquery']
   'waypoints-sticky':

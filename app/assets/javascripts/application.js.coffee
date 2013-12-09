@@ -1,7 +1,7 @@
 require [
     'jquery'
     'underscore'
-    'ghosttype'
+    # 'ghosttype'
 ], ($, _) ->
 
   $ ->
