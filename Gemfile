@@ -29,6 +29,8 @@ group :assets do
   # https://github.com/rails/sass-rails
   gem 'sass-rails'
 
+  gem "sass", "~> 3.2.13"
+
   # Compass is an open-source CSS Authoring Framework.
   # https://github.com/Compass/compass-rails
   gem 'compass-rails'
@@ -84,6 +86,8 @@ gem 'rvm-capistrano' # Gems for production only
 
 # Hipchat integration gem
 gem 'hipchat'
+
+gem 'tilt', '1.3.3'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
