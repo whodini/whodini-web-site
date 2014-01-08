@@ -7,8 +7,8 @@ require [
 
   $ ->
     # load the sign in and sign up links from confiuration manager
-    $('a[href="#signin"').attr('href', ConfigManager.getValue('app_url'))
-    $('a[href="#signup"').attr('href', "#{ConfigManager.getValue('app_url')}fre")
+    $('a[href="#signin]"').attr('href', ConfigManager.getValue('app_url'))
+    $('a[href="#signup]"').attr('href', "#{ConfigManager.getValue('app_url')}fre")
     $('.close').click (event) ->
       event.preventDefault()
       $(event.target).parent().hide('fast')
