@@ -73,7 +73,7 @@ end
 
 gem 'jquery-rails'
 # Deploy with Capistrano
-gem 'capistrano'
+gem 'capistrano', '~> 2.15.5'
 gem 'cap_git_tools'
 gem 'capawsext', '>=0.2'
 gem 'fog'

@@ -238,7 +238,7 @@ DEPENDENCIES
   animation
   cap_git_tools
   capawsext (>= 0.2)
-  capistrano
+  capistrano (~> 2.15.5)
   coffee-rails
   colored
   compass-h5bp
